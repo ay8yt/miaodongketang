@@ -3,15 +3,23 @@ const sass = require("gulp-sass");
 const uglify = require("gulp-uglify"); //压缩JS模块
 const babel = require('gulp-babel');
 const connect = require("gulp-connect");
+const mincss = require('gulp-clean-css');
+const imagemin = require('gulp-imagemin');
+const imageminJpegRecompress = require('imagemin-jpeg-recompress');
+const imageminOptipng = require('imagemin-optipng');
+
+
 
 /**
  * 打包项目
  */
 gulp.task("build", function() {
-	//复制CSS
+	//复制，压缩CSS
 	gulp.src("src/**/*.css", {
 		base: 'src'
-	}).pipe(gulp.dest("./"))
+	})
+	.pipe(mincss({compatibility: 'ie8'}))
+	.pipe(gulp.dest("./"))
 
 	//编译ES6 ， 压缩JS
 	gulp.src('src/**/*.js', {
@@ -23,15 +31,44 @@ gulp.task("build", function() {
 		.pipe(uglify())
 		.pipe(gulp.dest('./'))
 
-	//复制图片
-	gulp.src('src/images/**/*.png', {
+	//复制,压缩图片
+	var jpgmin = imageminJpegRecompress({
+        accurate: false,//高精度模式
+        quality: "low",//图像质量:low, medium, high and veryhigh;
+        method: "smallfry",//网格优化:mpe, ssim, ms-ssim and smallfry;
+        min: 30,//最低质量
+        loops: 0,//循环尝试次数, 默认为6;
+        progressive: false,//基线优化
+        subsample: "default"//子采样:default, disable;
+    }),
+    pngmin = imageminOptipng({
+        optimizationLevel: 4
+    });
+	gulp.src('src/images/**/*.{png,jpg,gif,ico}', {
 		base: 'src'
-	}).pipe(gulp.dest('./'));
+	})
+	.pipe(imagemin({
+            use: [jpgmin, pngmin]
+        }))
+	.pipe(gulp.dest('./'));
+	
+	
+
+	
+	
+	
+	
+	
 	
 	//复制HTML
 	gulp.src('src/**/*.html', {
 		base: 'src'
 	}).pipe(gulp.dest('./'));
+	
+	
+	
+	
+	
 });
 
 
