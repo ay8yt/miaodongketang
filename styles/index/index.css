@@ -1,0 +1,24 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0; }
+
+ul, ol {
+  list-style: none; }
+
+html, body {
+  width: 100%; }
+
+.swiper-container {
+  margin-top: 51px;
+  width: 100%;
+  height: 300px; }
+  .swiper-container .swiper-slide:nth-child(1) {
+    background: url(../../images/index/initpintu_副本.jpg) center no-repeat; }
+  .swiper-container .swiper-slide:nth-child(2) {
+    background: url(../../images/index/show_Wf3CLkrY-uxvaK263MIDBDn83AHRKpi9RUmbn1zo3bo.jpg) center no-repeat; }
+  .swiper-container .swiper-slide:nth-child(3) {
+    background: url(../../images/index/show_X-635uhSSgpSKqkQLnSU4iOu1cKymj_23moOWn9V9L8.jpg) center no-repeat; }
+
+section {
+  padding: 30px; }

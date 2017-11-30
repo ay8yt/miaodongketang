@@ -11,7 +11,7 @@ gulp.task("build", function() {
 	//复制CSS
 	gulp.src("src/**/*.css", {
 		base: 'src'
-	}).pipe(gulp.dest("_layouts"))
+	}).pipe(gulp.dest("./"))
 
 	//编译ES6 ， 压缩JS
 	gulp.src('src/**/*.js', {
@@ -21,17 +21,17 @@ gulp.task("build", function() {
 			presets: ['env']
 		}))
 		.pipe(uglify())
-		.pipe(gulp.dest('_layouts'))
+		.pipe(gulp.dest('./'))
 
 	//复制图片
 	gulp.src('src/images/**/*.png', {
 		base: 'src'
-	}).pipe(gulp.dest('_layouts'));
+	}).pipe(gulp.dest('./'));
 	
 	//复制HTML
 	gulp.src('src/**/*.html', {
 		base: 'src'
-	}).pipe(gulp.dest('_layouts'));
+	}).pipe(gulp.dest('./'));
 });
 
 
