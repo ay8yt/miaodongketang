@@ -1,0 +1,16 @@
+{
+  "name": "miaodongketang",
+  "version": "1.0.0",
+  "description": "This is for study gulp project !",
+  "author": "yintao",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-connect": "^5.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "node-sass": "^4.7.2"
+  }
+}
