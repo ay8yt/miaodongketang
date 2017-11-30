@@ -15,10 +15,10 @@ const imageminOptipng = require('imagemin-optipng');
  */
 gulp.task("build", function() {
 	//复制，压缩CSS
-	gulp.src("src/**/*.css", {
+	gulp.src("src/styles/**/*.css", {
 		base: 'src'
 	})
-	.pipe(mincss({compatibility: 'ie8'}))
+//	.pipe(mincss())   有bug，暂不压缩
 	.pipe(gulp.dest("./"))
 
 	//编译ES6 ， 压缩JS
