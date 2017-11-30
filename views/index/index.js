@@ -1,1 +1,1 @@
-"use strict";define(["jquery","swiper"],function(e,i){return{load:function(){new i(".swiper-container",{autoplay:!0,direction:"vertical",speed:800,pagination:{el:".swiper-pagination"}})}}});
+"use strict";define(["jquery","swiper","waves"],function(i,n,e){return{load:function(){e.init();new n(".swiper-container",{autoplay:!0,direction:"horizontal",speed:800,pagination:{el:".swiper-pagination"}})}}});

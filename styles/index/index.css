@@ -9,16 +9,46 @@ ul, ol {
 html, body {
   width: 100%; }
 
-.swiper-container {
-  margin-top: 51px;
-  width: 100%;
-  height: 300px; }
-  .swiper-container .swiper-slide:nth-child(1) {
-    background: url("../../images/index/initpintu.jpg") center no-repeat; }
-  .swiper-container .swiper-slide:nth-child(2) {
-    background: url('../../images/index/show_Wf3CLkrY-uxvaK263MIDBDn83AHRKpi9RUmbn1zo3bo.jpg') center no-repeat; }
-  .swiper-container .swiper-slide:nth-child(3) {
-    background: url('../../images/index/show_X-635uhSSgpSKqkQLnSU4iOu1cKymj_23moOWn9V9L8.jpg') center no-repeat; }
+.navbar .logo {
+  width: 140px; }
+
+.navbar .nav {
+  margin-left: 40px; }
+  .navbar .nav a {
+    line-height: 30px;
+    font-size: 15px; }
+
+.banner .container {
+  padding: 15px; }
+  .banner .container .swiper-container {
+    margin-top: 100px;
+    width: 100%;
+    height: 500px;
+    border-radius: 5px;
+    box-shadow: 0 0px 1px 1px rgba(0, 0, 0, 0.4); }
+    .banner .container .swiper-container .swiper-slide:nth-child(1) {
+      background: url("../../images/index/banner01.jpg") center no-repeat;
+      background-size: 100%; }
+    .banner .container .swiper-container .swiper-slide:nth-child(2) {
+      background: url("../../images/index/banner04.jpg") center no-repeat;
+      background-size: 100%; }
+    .banner .container .swiper-container .swiper-slide:nth-child(3) {
+      background: url("../../images/index/banner05.jpg") center no-repeat;
+      background-size: 100%; }
 
 section {
   padding: 30px; }
+  section .page-header small {
+    font-size: 14px; }
+  section .container {
+    padding: 15px; }
+    section .container .category {
+      margin: 20px auto;
+      padding: 30px;
+      width: 100%;
+      height: 180px;
+      box-shadow: 0 0px 1px 1px rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      text-align: center;
+      font: 26px/120px "微软雅黑";
+      color: white; }

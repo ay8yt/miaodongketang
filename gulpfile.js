@@ -52,22 +52,10 @@ gulp.task("build", function() {
         }))
 	.pipe(gulp.dest('./'));
 	
-	
-
-	
-	
-	
-	
-	
-	
 	//复制HTML
 	gulp.src('src/**/*.html', {
 		base: 'src'
 	}).pipe(gulp.dest('./'));
-	
-	
-	
-	
 	
 });
 
@@ -82,20 +70,21 @@ gulp.task("refreshHTML", function() {
 
 gulp.task("compileSass", function() {
 	//生成到src目录
-	gulp.src("src/**/*.scss", {
-			base: '.'
+	gulp.src("src/styles/**/*.scss", {
+			base: 'src'
 		})
 		.pipe(sass({
 			style: "expanded"
 		}))
-		.pipe(gulp.dest(""))
+		.on('error', swallowError)
+		.pipe(gulp.dest("src"))
 })
 
 //监听任务
 gulp.task("server", function() {
 	//让connect启动一个服务器，这样它才能即时刷新浏览器
 	connect.server({
-		root: 'src',
+		root: "src",
 		livereload: true
 	});
 	//检测文件的变化，执行相应的任务
@@ -103,3 +92,9 @@ gulp.task("server", function() {
 	gulp.watch("src/styles/**/*.scss", ["compileSass"]);
 	gulp.watch("src/styles/**/*.css", ["refreshHTML"]);
 });
+
+function swallowError(error) {
+    // If you want details of the error in the console
+  console.error(error.toString())
+  this.emit('end')
+}
