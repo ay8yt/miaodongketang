@@ -1,1 +1,0 @@
-"use strict";define(["jquery","swiper"],function(e,i){return{load:function(){new i(".swiper-container",{autoplay:!0,direction:"vertical",speed:800,pagination:{el:".swiper-pagination"}})}}});
