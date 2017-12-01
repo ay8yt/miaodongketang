@@ -1,1 +1,1 @@
-"use strict";define(["jquery","swiper","waves"],function(i,n,e){return{load:function(){e.init();new n(".swiper-container",{autoplay:!0,direction:"horizontal",speed:800,pagination:{el:".swiper-pagination"}})}}});
+"use strict";define(["jquery","swiper","waves"],function(i,e,n){return{load:function(){n.init();new e(".swiper-container",{autoplay:!0,direction:"horizontal",speed:800,pagination:{el:".swiper-pagination"}});i(".category").click(function(i){setTimeout(function(){window.open("views/category/category.html")},200)})}}});

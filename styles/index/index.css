@@ -9,14 +9,20 @@ ul, ol {
 html, body {
   width: 100%; }
 
-.navbar .logo {
-  width: 140px; }
-
-.navbar .nav {
-  margin-left: 40px; }
-  .navbar .nav a {
-    line-height: 30px;
-    font-size: 15px; }
+.navbar {
+  background: #e6e6e6;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2); }
+  .navbar .logo {
+    display: block;
+    width: 150px;
+    height: 60px;
+    background: url("../../images/index/logo2.png") 0px -35px no-repeat;
+    background-size: 100%; }
+  .navbar .nav {
+    margin-left: 40px; }
+    .navbar .nav a {
+      line-height: 30px;
+      font-size: 15px; }
 
 .banner .container {
   padding: 15px; }

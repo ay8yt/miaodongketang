@@ -1,0 +1,1 @@
+"use strict";require(["../../conf/config"],function(){require(["css!../../styles/category/category.css"]),require(["css!https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"]),require(["jquery","waves"],function(s,c){s(function(){console.log("dom ready"),c.init(),s(".navlist a.btn").click(function(c){s(this).addClass("active").siblings().removeClass("active")})})})});
