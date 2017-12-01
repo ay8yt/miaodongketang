@@ -1,1 +1,0 @@
-"use strict";require(["conf/config"],function(){require(["indexpage"],function(e){e.load()})});
