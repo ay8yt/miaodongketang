@@ -16,8 +16,8 @@ html, body {
     display: block;
     width: 150px;
     height: 60px;
-    background: url("../../images/index/logo2.png") 0px -35px no-repeat;
-    background-size: 100%; }
+    background: url("../../images/index/logo2.png") 0px -45px no-repeat;
+    background-size: 115%; }
   .navbar .nav {
     margin-left: 40px; }
     .navbar .nav a {

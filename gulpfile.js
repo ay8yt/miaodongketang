@@ -35,14 +35,14 @@ gulp.task("build", function() {
 	var jpgmin = imageminJpegRecompress({
         accurate: false,//高精度模式
         quality: "low",//图像质量:low, medium, high and veryhigh;
-        method: "smallfry",//网格优化:mpe, ssim, ms-ssim and smallfry;
-        min: 30,//最低质量
-        loops: 0,//循环尝试次数, 默认为6;
+        method: "mpe",//网格优化:mpe, ssim, ms-ssim and smallfry;
+        min: 10,//最低质量
+        loops: 6,//循环尝试次数, 默认为6;
         progressive: false,//基线优化
         subsample: "default"//子采样:default, disable;
     }),
     pngmin = imageminOptipng({
-        optimizationLevel: 4
+        optimizationLevel: 2
     });
 	gulp.src('src/images/**/*.{png,jpg,gif,ico}', {
 		base: 'src'
