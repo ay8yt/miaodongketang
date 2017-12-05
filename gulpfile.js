@@ -56,9 +56,9 @@ gulp.task("minjs", function(){
 	gulp.src('src/**/*.js', {
 		base: 'src'
 	})
-	.pipe(cache(babel({
+	.pipe(babel({
 		presets: ['env']
-	})))
+	}))
 	.pipe(uglify())
 	.pipe(gulp.dest('./'))
 })
