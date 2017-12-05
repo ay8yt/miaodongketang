@@ -51,6 +51,18 @@ gulp.task("build", function() {
 
 
 
+gulp.task("minjs", function(){
+	//编译ES6 ， 压缩JS
+	gulp.src('src/**/*.js', {
+		base: 'src'
+	})
+	.pipe(cache(babel({
+		presets: ['env']
+	})))
+	.pipe(uglify())
+	.pipe(gulp.dest('./'))
+})
+
 gulp.task("refreshHTML", function() {
 	//src用来读取，pipe用来输送
 	gulp.src("src/*.html").pipe(connect.reload());
@@ -76,6 +88,7 @@ gulp.task("server", function() {
 		livereload: true
 	});
 	//检测文件的变化，执行相应的任务
+	gulp.watch("src/**/*.js", ["minjs"]);
 	gulp.watch("src/**/*.html", ["refreshHTML"]);
 	gulp.watch("src/styles/**/*.scss", ["compileSass"]);
 	gulp.watch("src/styles/**/*.css", ["refreshHTML"]);
