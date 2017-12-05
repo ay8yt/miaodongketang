@@ -5,7 +5,17 @@
 		<meta charset="UTF-8">
 		<title></title>
 	</head>
-
+	<script id="videosdata-temp" type="text/html">
+		<%for(var i = 0; i < list.length; i++) {%>
+			<li
+				<% if(i==0) {%>
+					class="active waves-effect"
+				<% } else {%>
+					class="waves-effect"
+				<% } %>
+				><%:=list[i].name%></li>
+		<%}%>
+	</script>
 	<body>
 		<div class="container">
 			<div class="row">
@@ -27,7 +37,7 @@
 		<div class="row">
 			<div class="slide-navigator">
 				<div id="wrapper">
-					<ul>
+					<ul id="videosdata">
 						<li class="active">
 							插入排序
 						</li>
