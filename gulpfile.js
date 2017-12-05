@@ -5,10 +5,8 @@ const babel = require('gulp-babel');
 const connect = require("gulp-connect");
 const mincss = require('gulp-clean-css');
 const imagemin = require('gulp-imagemin');
-const imageminJpegRecompress = require('imagemin-jpeg-recompress');
-const imageminOptipng = require('imagemin-optipng');
-
-
+const cache = require('gulp-cache');
+const pngquant = require('imagemin-pngquant');
 
 /**
  * 打包项目
@@ -30,26 +28,16 @@ gulp.task("build", function() {
 		}))
 		.pipe(uglify())
 		.pipe(gulp.dest('./'))
-
-	//复制,压缩图片
-	var jpgmin = imageminJpegRecompress({
-        accurate: false,//高精度模式
-        quality: "low",//图像质量:low, medium, high and veryhigh;
-        method: "mpe",//网格优化:mpe, ssim, ms-ssim and smallfry;
-        min: 10,//最低质量
-        loops: 6,//循环尝试次数, 默认为6;
-        progressive: false,//基线优化
-        subsample: "default"//子采样:default, disable;
-    }),
-    pngmin = imageminOptipng({
-        optimizationLevel: 2
-    });
+	
+	//压缩图片
 	gulp.src('src/images/**/*.{png,jpg,gif,ico}', {
 		base: 'src'
 	})
-	.pipe(imagemin({
-            use: [jpgmin, pngmin]
-        }))
+ 	.pipe(cache(imagemin({
+        progressive: true,
+        svgoPlugins: [{removeViewBox: false}],
+        use: [pngquant()]
+    })))
 	.pipe(gulp.dest('./'));
 	
 	//复制HTML
