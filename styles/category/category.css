@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0; }
@@ -9,6 +10,14 @@ html, body {
   width: 100%;
   height: 100%;
   overflow-x: hidden; }
+
+.container .logo {
+  display: block;
+  width: 150px;
+  height: 60px;
+  background: url("../../images/index/logo2.png") 0px 0px no-repeat;
+  background-size: 100%;
+  margin-top: 25px; }
 
 .container .nav {
   margin-top: 50px; }
@@ -32,15 +41,17 @@ html, body {
         border: solid 1px #999;
         width: 160px;
         height: 90px;
-        -webkit-user-select: none; }
+        -webkit-user-select: none;
+        font: bold 20px/90px "微软雅黑";
+        text-align: center; }
         .slide-navigator #wrapper ul li.active {
-          border: solid 2px #80b3ff;
-          box-shadow: 0 0 3px 0px #80b3ff; }
+          background: #d9534f;
+          color: white; }
 
 .category-detail {
   padding: 0;
   margin: 50px auto;
   border-radius: 8px;
   overflow: hidden; }
-  .category-detail #fullscreen {
+  .category-detail #gotoUKu {
     margin: 20px auto; }
