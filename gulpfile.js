@@ -65,7 +65,11 @@ gulp.task("minjs", function(){
 
 gulp.task("refreshHTML", function() {
 	//src用来读取，pipe用来输送
-	gulp.src("src/**/*.html").pipe(connect.reload());
+	gulp.src('src/**/*.html', {
+		base: 'src'
+	})
+	.pipe(connect.reload())
+	.pipe(gulp.dest('./'));
 });
 
 gulp.task("compileSass", function() {
@@ -78,6 +82,7 @@ gulp.task("compileSass", function() {
 		})))
 		.on('error', swallowError)
 		.pipe(gulp.dest("src"))
+		.pipe(gulp.dest("./"))
 })
 
 //监听任务
