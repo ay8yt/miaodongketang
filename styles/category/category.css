@@ -44,7 +44,8 @@ html, body {
         height: 90px;
         -webkit-user-select: none;
         font: bold 20px/90px "微软雅黑";
-        text-align: center; }
+        text-align: center;
+        word-wrap: break-word; }
         .slide-navigator #wrapper ul li.active {
           background: #d9534f;
           color: white; }
