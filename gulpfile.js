@@ -56,16 +56,16 @@ gulp.task("minjs", function(){
 	gulp.src('src/**/*.js', {
 		base: 'src'
 	})
-	.pipe(babel({
+	.pipe(cache(babel({
 		presets: ['env']
-	}))
+	})))
 	.pipe(uglify())
 	.pipe(gulp.dest('./'))
 })
 
 gulp.task("refreshHTML", function() {
 	//src用来读取，pipe用来输送
-	gulp.src("src/*.html").pipe(connect.reload());
+	gulp.src("src/**/*.html").pipe(connect.reload());
 });
 
 gulp.task("compileSass", function() {
@@ -73,9 +73,9 @@ gulp.task("compileSass", function() {
 	gulp.src("src/styles/**/*.scss", {
 			base: 'src'
 		})
-		.pipe(sass({
+		.pipe(cache(sass({
 			style: "expanded"
-		}))
+		})))
 		.on('error', swallowError)
 		.pipe(gulp.dest("src"))
 })
