@@ -10,7 +10,9 @@
 			暂无视频
 		<% } %>
 		<%for(var i = 0; i < list.length; i++) {%>
-			<li class="waves-effect" videourl="<%=list[i].videourl%>" pageurl="<%=list[i].pageurl%>"><%:=list[i].name%></li>
+			<li class="waves-effect" videourl="<%=list[i].videourl%>" pageurl="<%=list[i].pageurl%>">
+				<%:=list[i].name%>
+			</li>
 		<%}%>
 	</script>
 	<body>
