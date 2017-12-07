@@ -17,7 +17,8 @@ html, body {
   height: 60px;
   background: url("../../images/index/logo2.png") 0px 0px no-repeat;
   background-size: 100%;
-  margin-top: 25px; }
+  margin-top: 25px;
+  margin-left: -30px; }
 
 .container .nav {
   margin-top: 50px; }
