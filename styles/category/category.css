@@ -38,14 +38,16 @@ html, body {
       .slide-navigator #wrapper ul li {
         float: left;
         margin: 0px 20px;
+        padding: 0px 3px;
         border-radius: 3px;
         border: solid 1px #999;
         width: 160px;
         height: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         -webkit-user-select: none;
-        font: bold 20px/90px "微软雅黑";
-        text-align: center;
-        word-wrap: break-word; }
+        font: bold 16px/25px "微软雅黑"; }
         .slide-navigator #wrapper ul li.active {
           background: #d9534f;
           color: white; }

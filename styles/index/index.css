@@ -42,6 +42,17 @@ html, body {
       background: url("../../images/index/banner05.jpg") center no-repeat;
       background-size: 100%; }
 
+article .container code {
+  font-family: "微软雅黑"; }
+
+article .container .content {
+  display: none;
+  padding: 50px 100px; }
+  article .container .content p {
+    font-size: 17px; }
+    article .container .content p pre {
+      font-family: "微软雅黑"; }
+
 section {
   padding: 30px; }
   section .page-header small {
