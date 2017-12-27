@@ -10,8 +10,8 @@
 			暂无视频
 		<% } %>
 		<%for(var i = 0; i < list.length; i++) {%>
-			<li class="waves-effect" videourl="<%=list[i].videourl%>" pageurl="<%=list[i].pageurl%>">
-				<%:=list[i].name%>
+			<li class="waves-effect" style="background: url(<%=list[i].thumbnail %>);" videourl="<%=list[i].videourl%>" pageurl="<%=list[i].pageurl%>">
+				<%=list[i].name%>
 			</li>
 		<%}%>
 	</script>
@@ -50,14 +50,14 @@
 		</div>
 		<div class="container">
 			<div class="category-detail">
-				<iframe height=600 width=1140 class="center-block" src='' frameborder=0 'allowfullscreen'></iframe>
+				请在上面的视频列表中，选择你要查看的视频
 			</div>
 			<div class="row">
-				<div class="col-lg-4 col-lg-offset-4">
+				<div class="col-lg-4 col-lg-offset-2">
 					<a id="gotoUKu" class="center-block btn btn-danger btn-lg" style="display: none;" target="_blank" href="">去优酷观看</a>
 				</div>
-				<div class="col-lg-4 col-lg-offset-4">
-					<a id="dashang" class="center-block btn btn-danger btn-lg" style="display: none;" target="_blank" href="">打赏作者</a>
+				<div class="col-lg-4">
+					<a id="dashang" class="center-block btn btn-success btn-lg" style="display: none;" target="_blank" href="">打赏作者</a>
 				</div>
 			</div>
 			<div class="row">

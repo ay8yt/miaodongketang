@@ -30,7 +30,7 @@ gulp.task("build", function() {
 		.pipe(gulp.dest('./'))
 	
 	//压缩图片
-	gulp.src('src/images/**/*.{png,jpg,gif,ico}', {
+	gulp.src('src/images/**/*.{png,jpg,jpeg,gif,ico}', {
 		base: 'src'
 	})
  	.pipe(cache(imagemin({
