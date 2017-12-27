@@ -10,8 +10,8 @@
 			暂无视频
 		<% } %>
 		<%for(var i = 0; i < list.length; i++) {%>
-			<li class="waves-effect" style="background: url(<%=list[i].thumbnail %>);" videourl="<%=list[i].videourl%>" pageurl="<%=list[i].pageurl%>">
-				<%=list[i].name%>
+			<li videourl="<%=list[i].videourl%>" pageurl="<%=list[i].pageurl%>">
+				<img src="<%=list[i].thumbnail %>" width=160 /><p><%=list[i].name%></p>
 			</li>
 		<%}%>
 	</script>
@@ -50,7 +50,9 @@
 		</div>
 		<div class="container">
 			<div class="category-detail">
-				请在上面的视频列表中，选择你要查看的视频
+				<p>
+					请在上面的视频列表中，选择你要查看的视频
+				</p>
 			</div>
 			<div class="row">
 				<div class="col-lg-4 col-lg-offset-2">

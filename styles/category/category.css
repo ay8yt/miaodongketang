@@ -1,10 +1,12 @@
-@charset "UTF-8";
 * {
   padding: 0;
   margin: 0; }
 
 ul, ol {
   list-style: none; }
+
+img, button {
+  border: none; }
 
 html, body {
   width: 100%;
@@ -30,38 +32,44 @@ html, body {
   box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.3); }
   .slide-navigator #wrapper {
     overflow: hidden; }
-    .slide-navigator #wrapper ul {
+    .slide-navigator #wrapper #videosdata {
       width: 300px;
       height: 130px;
       margin: 0;
-      padding: 20px; }
-      .slide-navigator #wrapper ul li {
+      padding: 10px 10px 20px 20px; }
+      .slide-navigator #wrapper #videosdata li {
         float: left;
         margin: 0px 20px;
-        padding: 0px 3px;
         border-radius: 3px;
-        border: solid 1px #999;
         width: 160px;
         height: 90px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        -webkit-user-select: none;
-        font: bold 16px/25px "微软雅黑"; }
-        .slide-navigator #wrapper ul li.active {
-          background: #d9534f;
-          color: white; }
+        background-size: cover; }
+        .slide-navigator #wrapper #videosdata li.active {
+          color: red;
+          font-weight: bold; }
+        .slide-navigator #wrapper #videosdata li img {
+          border: none;
+          border-radius: 3px;
+          display: block; }
+        .slide-navigator #wrapper #videosdata li p {
+          margin-top: 5px;
+          font-size: 14px;
+          text-align: center;
+          -webkit-user-select: none; }
 
 .category-detail {
   padding: 0;
+  width: 760px;
   margin: 30px auto 10px auto;
-  box-shadow: 0 0 1px 1xp #888;
   border-radius: 8px;
   overflow: hidden;
-  background: #f1f1f1;
-  color: #787878;
-  font-size: 18px;
-  text-align: center;
-  line-height: 600px; }
+  background: #f1f1f1; }
+  .category-detail p {
+    color: #787878;
+    font-size: 18px;
+    text-align: center;
+    line-height: 400px; }
+  .category-detail iframe {
+    border: none; }
   .category-detail #gotoUKu {
     margin: 20px auto; }
