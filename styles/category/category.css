@@ -27,14 +27,14 @@ html, body {
 
 .slide-navigator {
   width: 100%;
-  height: 130px;
+  height: 145px;
   margin-top: 30px;
   box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.3); }
   .slide-navigator #wrapper {
     overflow: hidden; }
     .slide-navigator #wrapper #videosdata {
       width: 300px;
-      height: 130px;
+      height: 140px;
       margin: 0;
       padding: 10px 10px 20px 20px; }
       .slide-navigator #wrapper #videosdata li {
@@ -73,3 +73,34 @@ html, body {
     border: none; }
   .category-detail #gotoUKu {
     margin: 20px auto; }
+
+.page-leftside {
+  display: none;
+  position: fixed;
+  left: -300px;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background: white;
+  border-right: solid 1px #999; }
+  .page-leftside .erweima {
+    width: 250px;
+    text-align: center;
+    margin: auto; }
+    .page-leftside .erweima img {
+      width: 200px;
+      border-radius: 5px; }
+  .page-leftside .fold {
+    width: 30px;
+    height: 100px;
+    position: absolute;
+    right: -30px;
+    top: 45%;
+    line-height: 100px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border: 1px solid #999;
+    border-left: none;
+    background: white;
+    cursor: pointer;
+    -webkit-user-select: none; }
