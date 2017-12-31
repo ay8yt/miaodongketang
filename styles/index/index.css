@@ -36,13 +36,13 @@ html, body {
     border-radius: 5px;
     box-shadow: 0 0px 1px 1px rgba(0, 0, 0, 0.4); }
     .banner .container .swiper-container .swiper-slide:nth-child(1) {
-      background: url("../../images/index/banner01.jpg") center no-repeat;
+      background: url("../../images/index/banner.jpg") center no-repeat;
       background-size: 100%; }
     .banner .container .swiper-container .swiper-slide:nth-child(2) {
-      background: url("../../images/index/banner04.jpg") center no-repeat;
+      background: url("../../images/index/banner01.jpg") center no-repeat;
       background-size: 100%; }
     .banner .container .swiper-container .swiper-slide:nth-child(3) {
-      background: url("../../images/index/banner05.jpg") center no-repeat;
+      background: url("../../images/index/banner04.jpg") center no-repeat;
       background-size: 100%; }
 
 article .container code {
