@@ -1,1 +1,1 @@
-"use strict";define(["jquery","template","datas"],function(t,e,l){return function(r,p){var n=l[r],i=t(p+"-temp").html(),u=e(i,{list:n});t(p).html(u),console.log(250*t("#wrapper ul li").length+"px"),t("#wrapper>ul").css("width",250*t("#wrapper ul li").length+"px")}});
+"use strict";define(["jquery","template","datas"],function(t,e,n){return function(l,i){var o=n[l],r=t("#"+i+"-temp").html(),s=e(r,{list:o});console.log(t("#"+i)),t("#"+i).html(s)}});

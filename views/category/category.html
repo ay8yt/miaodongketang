@@ -5,18 +5,23 @@
 		<meta charset="UTF-8">
 		<title></title>
 	</head>
-	<script id="videosdata-temp" type="text/html">
+	<script id="videolist-temp" type="text/html">
 		<% if(list.length==0) {%>
 			暂无视频
 		<% } %>
 		<%for(var i = 0; i < list.length; i++) {%>
-			<li videourl="<%=list[i].videourl%>" pageurl="<%=list[i].pageurl%>">
-				<img src="<%=list[i].thumbnail %>" width=144 /><p><%=list[i].name%></p>
-			</li>
+			<div class="col-lg-3">
+				<div class="videoitem">
+					<a href="javascript:void(0)" class="thumbnail waves-effect waves-light">
+						<img src="<%=list[i].thumbnail %>" videourl="<%=list[i].videourl%>" pageurl="<%=list[i].pageurl%>">
+					</a>
+					<p><%=list[i].name%></p>
+				</div>
+			</div>	
 		<%}%>
 	</script>
 	<body>
-		<div class="container">
+		<div class="container header">
 			<div class="row">
 				<div class="col-lg-1">
 					<a href="http://www.miaodongketang.cn">
@@ -33,7 +38,7 @@
 						  	<a class="btn btn-default waves-effect" cno="005">数学系列</a>
 						  	<a class="btn btn-default waves-effect" cno="006">心理学系列</a>
 						  	<a class="btn btn-default waves-effect" cno="007">电影系列</a>
-						  	<a class="btn btn-default waves-effect" cno="008">逻辑思维训练</a>
+						  	<!-- <a class="btn btn-default waves-effect" cno="008">逻辑思维训练</a> -->
 						  	<a class="btn btn-default waves-effect" cno="009">表达能力训练</a>
 						  	<a class="btn btn-default waves-effect" cno="010">JS系列</a>
 						</div>
@@ -41,57 +46,61 @@
 				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="slide-navigator">
-				<div id="wrapper">
-					<ul id="videosdata">
-						
-					</ul>
-				</div>
-			</div>
-		</div>
+		<div class="page-header"></div>
 		<div class="container">
-			<div class="category-detail">
-				<p>
-					请在上面的视频列表中，选择你要查看的视频
-				</p>
-			</div>
 			<div class="row">
-				<div class="col-lg-4 col-lg-offset-2">
-					<a id="gotoUKu" class="center-block btn btn-danger btn-lg" style="display: none;" target="_blank" href="">去优酷观看</a>
+				<div class="col-lg-1"></div>
+				<div class="col-lg-10">
+					<div class="row" id="videolist"></div>
 				</div>
-				<div class="col-lg-4">
-					<a id="dashang" class="center-block btn btn-success btn-lg" style="display: none;">打赏作者</a>
-				</div>
+				<div class="col-lg-1"></div>
 			</div>
-			<div class="row">
-				<div class="col-lg-8 col-lg-offset-2" style="height: 100px;">
+		</div>
+		
+		<div class="videoscreen">
+			<div class="wrapper">
+				<div class="iframe-wrapper">
+					<p class="iframe-text">
+						视频正在加载中
+					</p>
+					<iframe id="videoplayer" height=504 width=896 src='' 'allowfullscreen'></iframe>
+				</div>
+				<div class="binary-code">
+					<div style="display: none">
+						<p><a class="thumbnail">
+								<img src="../../images/zhifu/1.png">
+						</a></p>
+						<br>
+						<p><a class="thumbnail">
+							<img src="../../images/zhifu/2.png">
+						</a></p>
+						<p>
+							轻轻的赞赏一下
+						</p>
+						<p>
+							鼓励作者制作出更好的教程
+						</p>
+					</div>
+					<div>
+						<p><a class="thumbnail">
+							<img src="../../images/zhifu/2018111.jpg">
+						</a></p>
+					</div>
+				</div>
+				<div class="footer">
+					<div class="col-md-4 col-md-offset-2">
+						<a id="gotoUKu" class="center-block btn btn-danger btn-md" target="_blank" href="">去优酷观看</a>
+					</div>
+					<div class="col-md-4">
+						<a id="closevideo" class="center-block btn btn-primary btn-md">关闭播放</a>
+					</div>
+					<!-- <a id="dashang" class="center-block btn btn-success btn-md">打赏作者</a> -->
+					<!-- <a id="refresh" class="center-block btn btn-primary btn-md" title="加载视频失败时，可以尝试刷新视频">刷新视频</a> -->
 				</div>
 			</div>
 		</div>
-		<div class="page-leftside">
-			<div class="erweima">
-				<br><br>
-				<p>
-					<img src="../../images/zhifu/1.png">
-				</p>
-				<br>
-				<p>
-					<img src="../../images/zhifu/2.png">
-				</p>
-				<br>
-				<p>
-					轻轻的赞赏一下
-				</p>
-				<p>
-					鼓励作者制作出更好的教程
-				</p>
-				<div class="fold">
-					<<
-				</div>
-			</div>
-		</div>
+		
 	</body>
-	<script data-main="category.js" src="https://cdn.bootcss.com/require.js/2.3.0/require.js"></script>
+	<script data-main="category.js" src="../../scripts/lib/require.js"></script>
 
 </html>
