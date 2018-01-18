@@ -77,5 +77,6 @@ section {
           font: 20px/34px "微软雅黑";
           color: black; }
         section .container .category-wrapper p.info {
-          font: 13px/30px "微软雅黑";
-          color: #999; }
+          font: 13px/18px "微软雅黑";
+          color: #999;
+          margin-bottom: 6px; }
