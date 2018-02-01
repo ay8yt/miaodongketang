@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0; }
@@ -29,7 +30,25 @@ html, body {
   text-align: center;
   margin-bottom: 15px; }
   #videolist .videoitem .thumbnail {
+    position: relative;
     margin-bottom: 0px; }
+    #videolist .videoitem .thumbnail.newest::after {
+      content: ' ';
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      width: 0;
+      height: 0;
+      border-width: 20px;
+      border-style: solid;
+      border-color: #E00 #E00 transparent transparent; }
+    #videolist .videoitem .thumbnail.newest::before {
+      content: '新';
+      position: absolute;
+      top: 2px;
+      right: 4px;
+      z-index: 5;
+      color: white; }
 
 .videoscreen {
   height: 100%;
