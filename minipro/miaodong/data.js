@@ -257,8 +257,8 @@ var localdata = {
         },
         {
             "name": "弹性盒的放大与缩小",
-            "videourl": "",
-            "pageurl": "",
+            "videourl": "http://v.qq.com/x/page/s0607zp4m2v.html",
+            "pageurl": "https://mp.weixin.qq.com/s?__biz=MzI2NDYzOTEzMQ==&mid=2247484277&idx=1&sn=00535c6557ddaeef7d87e8f230ee15f9&chksm=eaa8c481dddf4d97a282825098b34d93a6713c2ef7d6aa36195129792e80f51d045ed497ba1c#rd",
             "duration": "313",
             "new": "newest",
             "thumbnail": "../../images/thumbnail/growshrink.png"
