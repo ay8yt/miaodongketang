@@ -1,5 +1,4 @@
 {
-    //算法系列
     "algorithm": [
         {
             "name": "插入排序",
@@ -58,7 +57,6 @@
             "thumbnail": "../../images/thumbnail/hash.png"
         }
     ],
-    //不懂装懂系列
     "miaodong": [
         {
             "name": "面向对象01-起源",
