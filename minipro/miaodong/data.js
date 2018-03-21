@@ -1,4 +1,4 @@
-var localdata = {
+{
     //算法系列
     "algorithm": [
         {
@@ -265,5 +265,3 @@ var localdata = {
         }
     ]
 }
-
-export default localdata;
