@@ -1,5 +1,5 @@
 {
-    "algorithm": [
+    "algorithm":[
         {
             "name": "插入排序",
             "videourl": "http://v.qq.com/x/page/p05308yhnyp.html",
