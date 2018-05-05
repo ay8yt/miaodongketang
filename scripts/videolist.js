@@ -1,1 +1,1 @@
-"use strict";define(["jquery","template","datas"],function(t,e,n){return function(l,i){var o=n[l],r=t("#"+i+"-temp").html(),s=e(r,{list:o});console.log(t("#"+i)),t("#"+i).html(s)}});
+"use strict";define(["jquery","template","datas"],function(t,e,n){return function(i,r){var u=n[i],a=t("#"+r+"-temp").html(),l=e(a,{list:u});t("#"+r).html(l)}});
