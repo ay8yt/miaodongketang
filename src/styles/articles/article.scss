@@ -1,0 +1,46 @@
+@import "../common.scss";
+@import "../mixins.scss";
+ 
+html,body {
+    width: 100%;
+}
+
+.navbar {
+    background: rgb(230,230,230);
+    box-shadow: 0 0 4px 1px rgba(0,0,0,0.3);
+    .logo {
+        display: block;
+        width: 150px;
+        height: 60px;
+        background: url("../../images/index/logo2.png") 0px 0px no-repeat;
+        background-size: 100%;
+    }   
+    .nav {
+        margin-left: 40px;
+        a {
+            line-height: 30px;
+            font-size: 15px;
+        }
+    }
+}
+
+.page-body {
+    margin-top: 100px;
+    .article-title {
+        padding: 3px;
+        p.bg-info {
+            margin-bottom: 0; padding: 8px; line-height:35px;
+            vertical-align: middle;
+            .title-img {
+                display: inline-block; width: 40px; height: auto; margin-right: 10px;
+                img {
+                    width: 100%; height: auto; 
+                    border-radius: 2px;
+                }
+            }
+            .badge {
+                float: right; margin-top: 3%;
+            }
+        }
+    }
+}

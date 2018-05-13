@@ -1,0 +1,12 @@
+
+@mixin css3($prop, $val) {
+    -webkit-#{$prop} : $val;
+    -moz-#{$prop} : $val;
+    -ms-#{$prop} : $val;
+    #{$prop} : $val;
+}
+
+@mixin bgm($url, $size) {
+    background: url('#{$url}') center no-repeat;
+    background-size: $size;
+}
