@@ -1,7 +1,7 @@
 
 requirejs.config({
 	baseUrl: "https://www.miaodongketang.cn/",
-	//baseUrl: "http://localhost:8080",
+	// baseUrl: "http://localhost:8080",
 	paths: {
 		"jquery": "https://cdn.bootcss.com/jquery/3.2.1/jquery.min",
 		"swiper": "https://cdn.bootcss.com/Swiper/4.0.3/js/swiper.min",
