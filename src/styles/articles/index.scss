@@ -28,18 +28,18 @@ html,body {
     margin-top: 100px;
     .article-title {
         padding: 3px;
-        p.bg-info {
-            margin-bottom: 0; padding: 8px; line-height:35px;
-            vertical-align: middle;
-            .title-img {
-                display: inline-block; width: 40px; height: auto; margin-right: 10px;
-                img {
-                    width: 100%; height: auto; 
+        a {
+            text-decoration: none;
+            p.bg-info {
+                margin-bottom: 0; padding: 8px; line-height:35px;
+                vertical-align: middle;
+                .title-img {
+                    display: inline-block; height: 45px; width: auto; margin-right: 10px;
                     border-radius: 2px;
+                    img {
+                        height: 100%; width: auto; 
+                    }
                 }
-            }
-            .badge {
-                float: right; margin-top: 3%;
             }
         }
     }

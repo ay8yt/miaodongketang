@@ -1,0 +1,73 @@
+@import "../../common.scss";
+@import "../../mixins.scss";
+@import "../common.scss";
+
+html,body {
+    width: 100%;
+}
+
+.navbar {
+    background: rgb(230,230,230);
+    box-shadow: 0 0 4px 1px rgba(0,0,0,0.3);
+    .logo {
+        display: block;
+        width: 150px;
+        height: 60px;
+        background: url("../../../images/index/logo2.png") 0px 0px no-repeat;
+        background-size: 100%;
+    }   
+    .nav {
+        margin-left: 40px;
+        li {
+            &.active {
+                background: #85d1f6;
+                a {
+                    font-weight: bold;
+                    color: #222;
+                } 
+            } 
+            a {
+                line-height: 30px;
+                font-size: 15px;
+            }
+        }
+       
+    }
+}
+
+.page-body {
+    margin-top: 70px;
+    font-size: 18px;
+    .jumbotron {
+        @extend %article-title;
+    }
+}
+
+
+.code-board {
+    border-radius: 5px; 
+    overflow: hidden;
+    display: inline-block;
+    table {
+        tr {
+            td {
+                background-color: rgb(63, 63, 63); 
+                border: 1px solid rgb(50, 50, 50); 
+                padding: 8px 16px;
+                font-size: 17px;
+                font-family: Consolas;
+            }
+        }
+    }
+}
+
+p {
+    margin: 20px 0 !important;
+}
+p.answers {
+    margin: 5px 0 !important;
+}
+
+.itlc {
+    font-style: italic;
+}

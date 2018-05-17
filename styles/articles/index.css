@@ -30,20 +30,19 @@ html, body {
   margin-top: 100px; }
   .page-body .article-title {
     padding: 3px; }
-    .page-body .article-title p.bg-info {
-      margin-bottom: 0;
-      padding: 8px;
-      line-height: 35px;
-      vertical-align: middle; }
-      .page-body .article-title p.bg-info .title-img {
-        display: inline-block;
-        width: 40px;
-        height: auto;
-        margin-right: 10px; }
-        .page-body .article-title p.bg-info .title-img img {
-          width: 100%;
-          height: auto;
+    .page-body .article-title a {
+      text-decoration: none; }
+      .page-body .article-title a p.bg-info {
+        margin-bottom: 0;
+        padding: 8px;
+        line-height: 35px;
+        vertical-align: middle; }
+        .page-body .article-title a p.bg-info .title-img {
+          display: inline-block;
+          height: 45px;
+          width: auto;
+          margin-right: 10px;
           border-radius: 2px; }
-      .page-body .article-title p.bg-info .badge {
-        float: right;
-        margin-top: 3%; }
+          .page-body .article-title a p.bg-info .title-img img {
+            height: 100%;
+            width: auto; }

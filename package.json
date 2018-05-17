@@ -16,8 +16,10 @@
     "gulp-clean-css": "^3.9.2",
     "gulp-connect": "^5.2.0",
     "gulp-imagemin": "^4.1.0",
-    "gulp-sass": "^3.1.0",
+    "gulp-sass": "^3.2.1",
     "gulp-uglify": "^3.0.0",
-    "imagemin-pngquant": "^5.0.1"
-  }
+    "imagemin-pngquant": "^5.0.1",
+    "node-sass": "^4.9.0"
+  },
+  "dependencies": {}
 }

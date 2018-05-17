@@ -33,11 +33,11 @@ gulp.task("build", function() {
 	gulp.src('src/images/**/*.{png,jpg,jpeg,gif,ico}', {
 		base: 'src'
 	})
- 	.pipe(cache(imagemin({
+ 	/*.pipe(cache(imagemin({
         progressive: true,
         svgoPlugins: [{removeViewBox: false}],
         use: [pngquant()]
-    })))
+    })))*/
 	.pipe(gulp.dest('./'));
 	
 	//复制HTML

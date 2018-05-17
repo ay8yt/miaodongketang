@@ -1,1 +1,1 @@
-"use strict";require(["../../conf/config"],function(){require(["css!../../styles/articles/article.css"]),require(["css!https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"]),require(["jquery","utils"],function(s,c){s(window).ready(function(){})})});
+"use strict";require(["../../conf/config"],function(){require(["css!../../styles/articles/index.css"]),require(["css!https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"]),require(["jquery","utils"],function(s,c){s(window).ready(function(){})})});

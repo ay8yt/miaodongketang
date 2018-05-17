@@ -1,0 +1,91 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+ul, ol {
+  list-style: none; }
+
+img, button {
+  border: none; }
+
+.page-body .jumbotron {
+  text-align: center;
+  background: #090d00; }
+  .page-body .jumbotron p {
+    font: 900 50px "Oswald", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    display: inline-block;
+    border: 4px double rgba(255, 255, 255, 0.25);
+    border-width: 4px 0; }
+    .page-body .jumbotron p span {
+      color: black;
+      letter-spacing: 0;
+      padding: .25em 0 .325em;
+      display: block;
+      margin: 0 auto;
+      text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+      /* Clip Background Image */
+      background: url(http://f.cl.ly/items/010q3E1u3p2Q0j1L1S1o/animated_text_fill.png) repeat-y;
+      -webkit-background-clip: text;
+      background-clip: text;
+      /* Animate Background Image */
+      -webkit-text-fill-color: transparent;
+      -webkit-animation: aitf 80s linear infinite;
+      /* Activate hardware acceleration for smoother animations */
+      -webkit-transform: translate3d(0, 0, 0);
+      -webkit-backface-visibility: hidden; }
+
+/* Animate Background Image */
+@-webkit-keyframes aitf {
+  0% {
+    background-position: 0% 50%; }
+  100% {
+    background-position: 100% 50%; } }
+
+html, body {
+  width: 100%; }
+
+.navbar {
+  background: #e6e6e6;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3); }
+  .navbar .logo {
+    display: block;
+    width: 150px;
+    height: 60px;
+    background: url("../../../images/index/logo2.png") 0px 0px no-repeat;
+    background-size: 100%; }
+  .navbar .nav {
+    margin-left: 40px; }
+    .navbar .nav li.active {
+      background: #85d1f6; }
+      .navbar .nav li.active a {
+        font-weight: bold;
+        color: #222; }
+    .navbar .nav li a {
+      line-height: 30px;
+      font-size: 15px; }
+
+.page-body {
+  margin-top: 70px;
+  font-size: 18px; }
+
+.code-board {
+  border-radius: 5px;
+  overflow: hidden;
+  display: inline-block; }
+  .code-board table tr td {
+    background-color: #3f3f3f;
+    border: 1px solid #323232;
+    padding: 8px 16px;
+    font-size: 17px;
+    font-family: Consolas; }
+
+p {
+  margin: 20px 0 !important; }
+
+p.answers {
+  margin: 5px 0 !important; }
+
+.itlc {
+  font-style: italic; }
