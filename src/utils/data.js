@@ -344,6 +344,14 @@
 					pageurl: "http://v.youku.com/v_show/id_XMzMwNDg2MjE3Mg==.html#paction",
 					duration: "402",
 					thumbnail: "../../images/thumbnail/xinxixiaohuabuliang.png"
+				},
+				{
+					name: "信息的植入强度01", 
+					videourl: "http://player.youku.com/embed/XMzYyODg3OTkyOA==",
+					pageurl: "http://v.youku.com/v_show/id_XMzYyODg3OTkyOA==.html?spm=a2hzp.8253869.0.0",
+					duration: "367",
+					new: "newest",
+					thumbnail: "../../images/thumbnail/xinxizhiruqiangdu.png"
 				}
 			],
 			//JS系列
