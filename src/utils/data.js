@@ -389,7 +389,6 @@
 					videourl: "http://player.youku.com/embed/XMzUwMDAyNTMxNg==",
 					pageurl: "http://v.youku.com/v_show/id_XMzUwMDAyNTMxNg==.html?spm=a2hzp.8253869.0.0",
 					duration: "405",
-					new: "newest",
 					thumbnail: "../../images/thumbnail/react.png"
 				},
 				{
@@ -397,8 +396,15 @@
 					videourl: "http://player.youku.com/embed/XMzU2OTA5ODY1Ng==",
 					pageurl: "http://v.youku.com/v_show/id_XMzU2OTA5ODY1Ng==.html?spm=a2h0k.8191407.0.0&from=s1.8-1-1.2",
 					duration: "499",
-					new: "newest",
 					thumbnail: "../../images/thumbnail/module.png"
+				},
+				{
+					name: "认识简单的递归", 
+					videourl: "http://player.youku.com/embed/XMzc3OTAyNjEzNg==",
+					pageurl: "https://v.youku.com/v_show/id_XMzc3OTAyNjEzNg==.html",
+					duration: "238",
+					new: "newest",
+					thumbnail: "../../images/thumbnail/recursion.png"
 				}
 			],
 			//CSS系列
