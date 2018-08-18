@@ -1,6 +1,6 @@
 
 requirejs.config({
-	baseUrl: "http://www.miaodongketang.cn/",
+	baseUrl: "https://www.miaodongketang.cn/",
 	// baseUrl: "http://localhost:8080",
 	paths: {
 		"jquery": "https://cdn.bootcss.com/jquery/3.2.1/jquery.min",
@@ -15,12 +15,12 @@ requirejs.config({
 	},
     map: {
         '*': {
-            'css': 'http://www.miaodongketang.cn/scripts/lib/css.js'
+            'css': 'https://www.miaodongketang.cn/scripts/lib/css.js'
         }
     },
 	shim: {
 		waves: {
-			deps: ['css!http://www.miaodongketang.cn/styles/lib/waves.css']
+			deps: ['css!https://www.miaodongketang.cn/styles/lib/waves.css']
 		},
 		swiper: {
 			deps: ['css!https://cdn.bootcss.com/Swiper/4.0.3/css/swiper.min.css']
