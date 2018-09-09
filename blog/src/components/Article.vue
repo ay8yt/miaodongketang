@@ -1,7 +1,14 @@
 <template>
-	<div v-html="articleDetail">
+	<div class="Home">
+		<div class="page-body container">
+			<ol class="breadcrumb">
+			  	<li class="active"><router-link to="/">文档专区</router-link></li>
+			  	<li class="active">{{articlename}}</li>
+			</ol>
+			<div class="inject" v-html="articleDetail"></div>
+		</div>
 	</div>
-
+	
 </template>
 
 <script>
@@ -9,24 +16,27 @@
 		name : "Article",
 		data() {
 			return {
+				articlename: "",
 				articleDetail : ''
 			}
 		},
 		created(){
-			let self = this;
-			let param = this.$route.params;
-			//根据得到的ID，请求相应文章数据
-			console.log( this.$route.params )
-			this.$axios.get(`/static/jsons/${param.aid}.json`)
-			.then(function (response) {
-				// handle success
-				let article = eval('('+response.data+')');
-				self.articleDetail = article.detail;
-			})
-			.catch(function (error) {
-				console.log(error);
-			})
-
+			this.getData(this.$route.params.aid);
+		},
+		methods: {
+			getData(articleId){
+				let self = this;
+				this.articlename = articleId;
+				this.$axios.get(`/static/jsons/${articleId}.json`)
+				.then(function (response) {
+					// handle success
+					let article = eval('('+response.data+')');
+					self.articleDetail = article.detail;
+				})
+				.catch(function (error) {
+					console.log(error);
+				})
+			}
 		}
 	}
 </script>
@@ -37,16 +47,22 @@
 	@import "~@/styles/article/_title.scss";
 
 	.page-body {
-	    margin-top: 70px;
+	    margin-top: 100px;
 	    font-size: 18px;
+	    .breadcrumb {
+	    	font-size: 14px;
+	    }
 	    .jumbotron {
 	        @extend %article-title;
 	    }
+		.illustration {
+			border-radius: 4px;
+		}
 		p {
 			margin: 20px 0 !important;
 		}
 		p.answers {
-			margin: 5px 0 !important;
+			margin: 5px 0 !important; 
 		}
 		p.title {
 			margin: 50px 0 !important;

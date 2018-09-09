@@ -7,8 +7,8 @@
 			</div>
 			<div class="navbar-collapse collapse">
 			  <ul class="nav navbar-nav">
-				<li><a href="http://www.miaodongketang.cn">秒懂课堂</a></li>
-				  <li><a href="http://www.miaodongketang.cn/views/category/category.html#cno=001" target="_blank" >视频专区</a></li>
+				<li><a href="https://www.miaodongketang.cn">秒懂课堂</a></li>
+				  <li><a href="https://www.miaodongketang.cn/views/category/category.html#cno=001" target="_blank" >视频专区</a></li>
 				  <li><a href="/blog/dist/" style="color:red"><b>文档专区</b></a></li>
 			  </ul>
 			</div>

@@ -1,7 +1,12 @@
+# 井号其实就是注释，这里说明一下你要忽略的文件
+
+# 忽略.project这个文件
 .project
+
+# 忽略node_modules这个文件夹
 node_modules/
+
+# 忽略根目录下blog文件夹下的node_modules这个文件夹
 blog/node_modules/
-
-
 
 # src/
