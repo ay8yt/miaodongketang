@@ -27,7 +27,7 @@
 			getData(articleId){
 				let self = this;
 				this.articlename = articleId;
-				this.$axios.get(`/static/jsons/${articleId}.json`)
+				this.$axios.get(`https://www.miaodongketang.cn/blog/static/jsons/${articleId}.json`)
 				.then(function (response) {
 					// handle success
 					let article = eval('('+response.data+')');
