@@ -1,0 +1,189 @@
+{
+	"id" : "git",
+	"detail" : `
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="jumbotron"> <p> <span>工作中如何使用gulp构建项目？</span> </p> </div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<p>
+							<code>注意：</code>
+							<code>这篇文章假定你具备较好的JS基础，可以独立完成小规模的项目</code>
+						</p>
+						<p>
+							<code>你甚至应该知道，常见的各种JS函数库和插件</code>
+						</p>
+						<p>
+							<code>同时，你应该具备一定的项目部署的常识，例如知道真正部署在服务器上的文件，跟开发的时候编写的文件是不同的</code>
+						</p>
+						<p>
+							<code>再同时，你必须要具备nodeJS的一些最基本知识。例如使用npm命令安装软件等，知道nodeJS如何加载模块</code>
+						</p>
+						<p>
+							<code>如果你用过sass或者less那就更好不过了。</code>
+						</p>
+						<p>
+							<code>最重要的，就是你需要知道常见的命令行操作，例如<span class="btn btn-xs btn-default">cd</span>、<span class="btn btn-xs btn-default">cd ..</span> </code>
+						</p>
+						<p>
+							<code>假设你没听说过sass甚至不知道node为何物，JQuery不熟，甚至没用JS写过项目。</code>
+						</p>
+						<p>
+							<code>没关系，请点击浏览器右上角的差号，整个世界都会恢复往日的美好 </code>
+							<img width=40 src="static/images/gulp/goodbye.png"/>
+						</p>
+					</div>
+				</div>
+				<br><br>
+				<div class="panel panel-info">
+					<div class="panel-heading"> <h3>项目构建是什么？</h3> </div>
+					<div class="panel-body">
+						<p class="answers text-muted">
+							比如说吧，当项目部署上线时，你所有的JS文件，要不要进行压缩减小体积，以便于加载的时候速度更快？
+						</p>
+						<p class="text-warning">
+							<b> 嗯，这个确实需要。 </b>
+						</p>
+						<p class="answers text-muted">
+							图片要不要压缩处理，以获得更好的加载速度？
+						</p>
+						<p class="text-warning">
+							<b> 嗯嗯，这个确实需要。 </b>
+						</p>
+						<p class="answers text-muted">
+							你编写的JS代码使用了ES6语法，为了避免浏览器兼容，要不要转换成ES5？
+						</p>
+						<p class="text-warning">
+							<b> 嗯嗯嗯，这个确实需要。 </b>
+						</p>
+						<p class="answers text-muted">
+							你编写的scss源文件，要不要编译生成css？
+						</p>
+						<p class="text-warning">
+							<b> 嗯嗯嗯嗯，这个确实需要。 </b>
+						</p>
+						<p class="answers text-muted">
+							你的CSS是不是也要压缩？
+						</p>
+						<p class="text-warning">
+							<b> 嗯嗯嗯嗯嗯，这个确实需要。 </b>
+						</p>
+						<p class="answers text-muted">
+							开发过程中，你的页面跟后台服务器不在一台电脑上，你是否需要在本地搭建一个代理服务器以便于解决临时的跨域问题？
+						</p>
+						<p class="text-warning">
+							<b> 嗯嗯嗯嗯嗯嗯，这个确实需要。 </b>
+						</p>
+						<h3><p class="text-success">以上这些类似的问题，Gulp可以很轻松把它们放在一起完成。</p></h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<br><br>
+
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h3>Gulp是一个windows系统下的软件么？</h3>
+					</div>
+					<div class="panel-body">
+						<p class="answers text-muted">
+							<b> 很显然它不是。它是一个NodeJS编写的软件，需要我们先安装NodeJS的运行环境。 </b>
+						</p>
+						<p class="answers text-muted"> 这是nodeJS windows版网盘地址：</p>
+						
+						<p class="answers text-muted">
+							<code>https://pan.baidu.com/s/1taPXX2Y01tVcqFUd3eATQQ 密码：bwf9</code>
+						</p>
+						<p class="answers text-muted"> 版本号： v8.9.3 </p>
+					</div>
+				</div>	
+			</div>
+		</div>
+		
+		<br><br>
+
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h3>安装好NodeJS环境，接下来做什么？</h3>
+					</div>
+					<div class="panel-body">
+						<p class="answers text-muted"> <b> 安装Gulp v3.9.1 </b> </p>
+						<p class="answers text-muted"> 我们需要使用node提供的一个叫做npm的命令 </p>
+						<p class="text-warning"> <b> 需要我打开命令行吗？ </b> </p>
+						<p class="answers text-muted"> 不然呢？ 难不成你想用QQ给NodeJS发个消息？ </p>
+						<p class="text-warning"> <b> 打开后是不是像这样？ </b> </p>
+						<p class="text-warning"> <img src="static/images/gulp/cmd01.png"/> </p>
+						<p class="answers text-muted"> 接下来进入你项目的根目录，然后输入命令  <span class="commond-line">npm install gulp</span></p>
+						<p class="text-warning"> <b> 安装时为什么要进入项目根目录？难道每个需要gulp的项目都要装一遍吗？ </b> </p>
+						<p class="answers text-muted"> 没错，是这样的。因为每个项目使用gulp的功能不同，版本可能也不一样。这样每个项目的gulp相互独立。</p>
+						<p class="answers text-muted"> <code>注意 ！</code>在安装过程中，由于网速问题，经常导致安装失败。 多尝试几次就好</p>
+						<p class="answers text-muted"> 如果安装过程没有出现任何<code>Error</code>提示，那就没有问题了。 </p>
+						<p class="text-warning"> <b> 项目中多出了一个<code>node_modules</code>文件夹，这就是我下载的gulp软件？ </b> </p>
+						<p class="answers text-muted"> 是的，不要修改、移动或删除这个文件夹</p>
+					</div>
+				</div>	
+			</div>
+		</div>
+
+		<br><br>
+
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h3>开始编写gulp任务文件</h3>
+					</div>
+					<div class="panel-body">
+						<p class="text-warning"> <b>  这个任务文件是干什么的？？ </b> </p>
+						<p class="answers text-muted"> 简单的说，就是写一个任务列表，告诉gulp具体要做什么。 </p>
+						<p class="text-warning"> <b>  比如我现在要压缩我的js文件，该怎么编写gulp任务文件？</b> </p>
+						<p class="answers text-muted"> 现在，我们假定项目的目录结构是这样的：(可点击展开目录)</p>
+						<div id="treeview1" class="treeview"></div>
+						<p class="answers text-muted"> <code>src</code>目录存放我们的源文件，<code>dist</code>目录存放我们压缩后的文件</p>
+						<p class="answers text-muted"> 接下来我们要在项目的根目录，创建一个<code>gulpfile.js</code>文件</p>
+						<div id="treeview2" class="treeview"></div>
+						<p class="answers text-muted"> <code>gulpfile.js</code>文件内容如下：</p>
+						<p class="answers text-muted"> <code>如果你熟悉nodeJS</code>那么下面的代码理解起来将会非常容易：</p>
+						<p class="answers text-muted"> <code>如果你不熟悉nodeJS</code>那么下面的代码理解起来将会非常吃力：</p>
+						<p class="text-warning"> <img src="static/images/gulp/gulpfile01.png"/> </p>
+						<p class="answers text-muted"> 好了，一切准备就绪，准备启动gulp执行压缩任务</p>
+						<p class="answers text-muted"> 我们回到命令行，仍然在项目的根目录下，输入命令 <span class="commond-line">gulp minifyJS</span> </p>
+						<p class="text-warning"> <b>  我执行了这个命令，但是碰见了错误： </b> </p>
+						<p> <code>Error: Cannot find module 'gulp-uglify'</code></p>
+						<p class="answers text-muted">因为找不到<code>'gulp-uglify'</code>这个模块。所以接下来我们安装它，输入命令<span class="commond-line">npm install gulp-uglify</span></p>
+						<p class="text-warning"> <b>  等等，不是已经安装过gulp了吗？ 为什么压缩文件的模块还要单独安装？ </b> </p>
+						
+						<p class="answers text-muted"> gulp本身不具备压缩文件的功能。它的主要工作，是定义并执行任务。</p>
+						<p class="answers text-muted"> 而任务的具体内容是我们自己定的，就像gulpfile.js文件里写的那样。</p>
+						<p class="text-warning"> <b> 为什么gulp不把压缩js的功能集成进来，这样看来gulp其实没什么用了？ </b> </p>
+
+						<p class="answers text-muted"> 恰恰相反， 你仔细想，如果Gulp把功能集成进来，那么它能提供的功能无论如何是有限的</p>
+						<p class="answers text-muted"> 那样做还会让软件体积变大，不需要的功能也必须强制安装。并没有好处。</p>
+						<p class="answers text-muted"> 正是因为gulp可以借助任何其它软件来执行任务。理论上来说，gulp的功能是无限的。</p>
+						<p class="text-warning"> <b> 好像有点道理。 </b> </p>
+						<p class="answers text-muted"> 好了，接下来我们再次执行命令<span class="commond-line">gulp minifyJS</span></p>
+						
+						<p class="text-warning"> <b>  执行了，但又碰见了错误： </b> </p>
+						<p> <span class="commond-line">'gulp' 不是内部或外部命令，也不是可运行的程序或批处理文件。</span></p>
+						<p class="answers text-muted"> 这是因为我们之前把gulp安装在了项目里面。NodeJS运行环境并不能识别gulp命令</p>
+						<p class="text-warning"> <b> 那怎么办呢？ </b> </p>
+						<p class="answers text-muted"> 再把gulp全局安装一次<span class="commond-line">npm install gulp -g</span></p>
+						<p class="answers text-muted"> 好了，我们来看看最后生成的效果</p>
+						<div id="treeview3" class="treeview"></div>
+						<p class="answers text-muted"> <code>dist</code>目录中的文件全部都是压缩过的。</p>
+					</div>
+				</div>	
+			</div>
+		</div>
+
+		<h3><p class="text-success">目前，你已经掌握了Gulp的原理和最基本用法</p></h3>
+		<h3><p class="text-warning">Gulp可以借助其它模块产生无穷无尽的用法，篇幅有限，今天暂时只能介绍到这里</p></h3>
+		<h3><p class="text-warning">如果大家有什么建议，可以到【秒dong课堂】微信公众号给我留言</p></h3>
+		<h3><p class="text-danger">我相信，万事"开头"难，所以接下来你的自学之路，将会无比的顺畅。</p></h3>
+	`
+}

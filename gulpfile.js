@@ -7,7 +7,7 @@ const mincss = require('gulp-clean-css');
 const imagemin = require('gulp-imagemin');
 const cache = require('gulp-cache');
 const pngquant = require('imagemin-pngquant');
-
+require("aacolors")
 /**
  * 打包项目
  */
@@ -107,3 +107,25 @@ function swallowError(error) {
   console.error(error.toString())
   this.emit('end')
 }
+
+
+
+
+
+
+
+
+
+
+	// var gulp = require("gulp"); //加载gulp模块
+	// var uglify = require("gulp-uglify"); //加载压缩JS模块
+
+	// //定义一个任务，名字叫minifyJS
+	// gulp.task("minifyJS", function(){
+		
+	// 	gulp.src("./src/**/*.js") //读取src目录下，以及所有子目录的js文件
+	// 		.pipe(uglify())  //通过pipe管道操作，传输给压缩模块处理
+	// 		.pipe(gulp.dest("./dist"))  //通过pipe管道操作，传输到dist目录
+
+	// })
+

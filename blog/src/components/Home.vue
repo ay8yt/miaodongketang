@@ -99,7 +99,12 @@
 						        </md-card-content>
 
 						        <md-card-actions>
-						          	<md-button><b class="md-button-color">阅读全文</b></md-button>
+									
+						          	<md-button>
+										<router-link :to="{ name:'article', params: {aid: 'gulp'} }">
+							          		<b class="md-button-color">阅读全文</b>
+						          		</router-link>  
+									</md-button>
 						          	<md-button><b class="md-button-color">分享</b></md-button>
 						        </md-card-actions>
 					      	</md-ripple>

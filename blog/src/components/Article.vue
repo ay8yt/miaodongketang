@@ -12,6 +12,8 @@
 </template>
 
 <script>
+	import "../libs/jquery.min";
+	import "../libs/bootstrap-treeview.min";
 	export default {
 		name : "Article",
 		data() {
@@ -22,13 +24,18 @@
 		},
 		created(){
 			this.getData(this.$route.params.aid);
+
+		},
+		mounted(){
+			//加载每篇文章对应的业务JS文件
+			$(`<script src="static/scripts/${this.$route.params.aid}/index.js">`).appendTo($("body"));
 		},
 		methods: {
 			getData(articleId){
 				let self = this;
 				this.articlename = articleId;
-				this.$axios.get(`https://www.miaodongketang.cn/blog/static/jsons/${articleId}.json`)
-				.then(function (response) {
+				this.$axios.get(`${process.env.API_HOST}/static/jsons/${articleId}.json`)
+				.then(function(response) {
 					// handle success
 					let article = eval('('+response.data+')');
 					self.articleDetail = article.detail;
@@ -44,7 +51,8 @@
 <style lang="scss">
 	/* Animate Background Image */
 
-	@import "~@/styles/article/_title.scss";
+	@import url("../assets/bootstrap-treeview.min.css");  
+	@import "~@/styles/article/_title.scss"; /*~@ 表示相对src目录*/
 
 	.page-body {
 	    margin-top: 100px;
@@ -67,8 +75,21 @@
 		p.title {
 			margin: 50px 0 !important;
 		}
+		img {
+			border-radius: 3px;
+		}
 	}
 
+	.commond-line {
+		background: #222;
+		color: white;
+		border-radius: 4px;
+		font-weight: lighter;
+		padding: 2px 10px;
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		font-size: 18px;
+		line-height: 18px;
+	}
 
 	.code-board {
 	    border-radius: 5px; 
