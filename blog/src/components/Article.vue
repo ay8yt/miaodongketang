@@ -24,7 +24,6 @@
 		},
 		created(){
 			this.getData(this.$route.params.aid);
-
 		},
 		mounted(){
 			//加载每篇文章对应的业务JS文件
@@ -70,7 +69,7 @@
 			margin: 20px 0 !important;
 		}
 		p.answers {
-			margin: 5px 0 !important; 
+			margin: 10px 0 !important; 
 		}
 		p.title {
 			margin: 50px 0 !important;
