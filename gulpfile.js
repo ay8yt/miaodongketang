@@ -7,7 +7,7 @@ const mincss = require('gulp-clean-css');
 const imagemin = require('gulp-imagemin');
 const cache = require('gulp-cache');
 const pngquant = require('imagemin-pngquant');
-require("aacolors")
+
 /**
  * 打包项目
  */
@@ -83,7 +83,10 @@ gulp.task("compileSass", function() {
 		.pipe(cache(sass({
 			style: "expanded"
 		})))
-		.on('error', swallowError)
+		.on('error', (error)=>{
+			// If you want details of the error in the console
+		  	console.error(error.toString())
+		})
 		.pipe(gulp.dest("src"))
 		.pipe(gulp.dest("./"))
 })
@@ -102,11 +105,7 @@ gulp.task("server", function() {
 	gulp.watch("src/styles/**/*.css", ["refreshHTML"]);
 });
 
-function swallowError(error) {
-    // If you want details of the error in the console
-  console.error(error.toString())
-  this.emit('end')
-}
+
 
 
 

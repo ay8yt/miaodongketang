@@ -1,0 +1,214 @@
+{
+	"id" : "react",
+	"detail" : `
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="jumbotron"> <p> <span>10分钟理解React概念</span> </p> </div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<code>注意：这篇文章假定你熟悉模板技术，至少使用过像art-template或ejs这样的简单模板</code>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<code>当然，这意味着你应该具备一些JS基础，对DOM操作足够熟练</code>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<code>同时，这篇文章要求你具备基本的面向对象思想，不清楚的可参考视频教程（不懂装懂系列）</code>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<code>由于React特殊语法要求，这篇文章要求你需要熟悉ES6的面向对象语法</code>
+					</div>
+				</div>
+				<br><br>
+				<div class="panel panel-info">
+					<div class="panel-heading"> <h3>模板的作用？</h3> </div>
+					<div class="panel-body">
+						<p class="answers text-muted">
+							例如下面这个模板：
+						</p>
+						<p>
+							<img src="static/images/react/001.png"/>
+						</p>
+						<p class="answers">
+							我们准备好一份数据：
+						</p>
+						<p>
+							<img src="static/images/react/002.png"/>
+						</p>
+						<p class="answers">
+							将数据填充至模板，生成HTML页面：
+						</p>
+						<p>
+							<img src="static/images/react/003.png"/>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<br><br>
+
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h3>当数据频繁改变时，会带来什么问题？</h3>
+					</div>
+					<div class="panel-body">
+						<p class="answers">
+							每一次数据改变，我们都需要将最新的数据<span class="text-danger">重新</span>填充模板
+						</p>
+						<p class="answers">
+							然后将生成的HTML文本<span class="text-danger">重新</span>append到页面上进行渲染
+						</p>
+						<p class="text-danger">
+							我们不禁要问：难道没有更简单的方式？
+						</p>
+						<p class="text-primary">
+							于是我们有了下面的解决方案：
+						</p>
+						<p>
+							<img src="static/images/react/004.png"/>
+						</p>
+						<p class="answers">
+							如果我们能将模板与数据绑定在一起，当数据变化时
+						</p>
+						<p class="answers">
+							<b>自动填充模板并更新页面。</b>
+						</p>
+						<p class="answers">
+							这样一来，我们只要操作数据，页面内容就可以实时产生变化了。
+						</p>
+						<p class="answers text-danger">
+							这就是react这个基于模板技术的框架给我们带来的好处。
+						</p>
+					</div>
+				</div>	
+			</div>
+		</div>
+		
+		<br><br>
+
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h3>React组件化到底是什么东西？</h3>
+					</div>
+					<div class="panel-body">
+						<p class="answers"> 首先我们必须要先问一个问题。 </p>
+						<p class="text-danger"> <b> 什么是组件？ </b> </p>
+						<p class="answers"> 我们再回过头看刚才的那个模板，它可以称得上一个组件吗？ </p>
+						<p class=" answers"> 虽然这个模板是可复用的，但把它叫做一个组件，恐怕还远远谈不上。 </p>
+						<p class="answers"> 为什么呢？ 这还要看我们如何来定义，什么是组件？</p>
+						<p class="text-danger"> <b> 所谓组件，指的是高度可复用的动态模板 </b> </p>
+						<p class="answers"> 而我们之前的模板，缺乏了3个重要的条件 </p>
+						<ul class="list-group">
+							<li href="#" class="list-group-item">
+								第一，它没有做到数据绑定，当数据改变时，页面不能够自动更新。
+							</li>
+							<li href="#" class="list-group-item">
+								第二，它无法保存页面中的交互动作。例如鼠标的划入、单击事件等等。
+							</li>
+							<li href="#" class="list-group-item">
+								第三，模板和模板之间不能够相互嵌套或引用，无法达到复用的最大化。
+							</li>
+						</ul>
+						<p class="text-danger"> <b> 而React编写的组件，搞定了上述所有问题。 </b> </p>
+					</div>
+				</div>	
+			</div>
+		</div>
+
+		<br><br>
+
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h3>为什么React标准语法推荐使用ES6？</h3>
+					</div>
+					<div class="panel-body">
+						<p class="answers">这还得从我们的面向对象思想说起</p>
+						<p class="answers">我们都知道类和对象之间的关系</p>
+						<p class="answers"> <img width="600" src="static/images/react/006.png"/> </p>
+						<p class="answers">如果把类看作是一个模板，那么通过这个模板，我们可以无限次的 实例化（new）对象。 </p>
+						<p class="answers">在面向对象当中，我们的类，就相当于一个高度可复用的组件 </p>
+						<p class="answers"> <b> 于是就有了下面的语法 </b> </p>
+						<p class="answers"> <img width="600" src="static/images/react/007.png"/> </p>
+						<p class="answers">我们使用Class来定义一个组件，每个组件必须有一个render方法用来渲染页面 </p>
+						<p class="answers">而在render方法里，我们可以像往常一样编写我们的模板内容<i class="glyphicon glyphicon-arrow-down"></i> </p>
+						<p class="answers"> <img width="800" src="static/images/react/008.png"/> </p>
+						<p class="answers"> <span class="text-danger">不仅如此，</span>我们连单击函数也保存在了组件当中<i class="glyphicon glyphicon-arrow-down"></i> </p>
+						<p class="answers"> <img width="800" src="static/images/react/009.png"/> </p>
+						<p class="answers">组件当中的数据，可以通过构造函数来进行传递。<i class="glyphicon glyphicon-arrow-down"></i></p>
+						<p class="answers"> <img width="800" src="static/images/react/010.png"/> </p>
+						<p class="answers">最后，我们通过ES6的模块化语法，将该组件以模块的形式暴露出去，让别的组件可以引用。<i class="glyphicon glyphicon-arrow-down"></i></p>
+						<p class="answers"> <img width="800" src="static/images/react/011.png"/> </p>
+						<p class="answers">引入组件之后，我们可以像写HTML标签那样，使用这个组件<i class="glyphicon glyphicon-arrow-down"></i></p>
+						<p class="answers"> <img width="800" src="static/images/react/012.png"/> </p>
+
+						<p class="answers text-danger"><b>好了，以上就是一个React组件的标准写法，是不是很简单呢？</b></p>
+
+					</div>
+				</div>	
+			</div>
+		</div>
+
+		<br><br>
+
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h3>React中的虚拟DOM是怎么一回事？</h3>
+					</div>
+					<div class="panel-body">
+						<p class="answers">回到我们之前说的数据绑定的问题上来</p>
+						<p class="answers"><code>假设</code>，我们现在有一个组件，DOM结构如下</p>
+						<p class="answers"> <img width=500 src="static/images/react/013.png"/> </p>
+						<p class="answers">目前，虽然React已经可以做到，在数据改变时，页面可以自动的实时更新</p>
+						<p class="answers"> <code>但是</code>这仍然没能解决一个问题 </p>
+						<p class="answers">当组件中任何一点小小的数据发生改变的时候，我们都需要<b>将整个组件重新渲染</b>一次，才能让页面更新。</p>
+						<p class="answers">这会给浏览器带来巨大的工作负担，很显然这也是不必要的。</p>
+						<p class="answers">于是，React引入了虚拟DOM技术</p>
+						<p class="answers">首先，在内存中构建一棵对象树，这棵树的结构跟DOM结构一致。</p>
+						<p class="answers">每个对象对应一个DOM节点，并保存这个节点的所有信息（理论上包括事件）</p>
+						<p class="answers"> <img src="static/images/react/014.png"/> </p>
+						<p class="answers">我们管这棵对象树，也叫做<b>虚拟DOM树</b></p>
+						<p class="answers">接下来，当数据发生改变的时候，</p>
+						<p class="answers">React会再次生成一棵新的虚拟DOM树</p>
+						<p class="answers"> <img src="static/images/react/015.png"/> </p>
+						<p class="answers">接下来，React会扫描这两棵虚拟DOM树的节点</p>
+						<p class="answers"> <img src="static/images/react/016.png"/> </p>
+						<p class="answers"> <img src="static/images/react/017.png"/> </p>
+						<p class="answers">最终将所有发生改变的节点记录下来</p>
+						<p class="answers">最终React会将发生改变的DOM节点做更新，而不会更新整个组件</p>
+						<p class="answers"> <img src="static/images/react/018.png"/> </p>
+						<p class="answers"><b>这就是虚拟DOM提升性能的原理。</b></p>
+					</div>
+				</div>	
+			</div>
+		</div>
+
+		<br><br>
+
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h3>总结一下React的特点：</h3>
+					</div>
+					<div class="panel-body">
+						<p class="answers"> <img src="static/images/react/019.png"/> </p>
+					</div>
+				</div>	
+			</div>
+		</div>
+	`
+}
