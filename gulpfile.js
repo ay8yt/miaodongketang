@@ -46,7 +46,7 @@ gulp.task("build", function() {
 	}).pipe(gulp.dest('./'));
 	
 	//复制static文件夹
-	gulp.src('blog/static/**/*.*').pipe(gulp.dest('./static/'));
+	return gulp.src('blog/static/**/*.*').pipe(gulp.dest('./static/'));
 
 });
 
