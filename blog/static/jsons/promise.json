@@ -1,7 +1,7 @@
 {
 	"id" : "promise",
 	"detail" : `
-		
+
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="jumbotron">
@@ -55,7 +55,7 @@
 										</div>
 									</td>
 								</tr>
-							
+
 							</table>
 						</div>
 
@@ -105,7 +105,7 @@
 						  	<button class="btn btn-default">添加定时器 setTimeout/setInterval</button>
 						  	<button class="btn btn-default">执行某个动画 animate</button>
 						  	<button class="btn btn-default">发起网络请求 request</button>
-						</div>	
+						</div>
 				  	</div>
 
 				</div>
@@ -124,7 +124,7 @@
 					<div class="panel-body">
 						<p>比如我们现在有两个动画，需要按顺序来执行，也就是第一个结束，第二个才能开始</p>
 						<p>这个时候可能有点麻烦，传统的解决方法是通过回调：</p>
-						
+
 						<div class="code-board">
 							<table>
 								<tr>
@@ -132,7 +132,7 @@
 										<div><span style=" color: #66D9EF;">animateA</span><span style="color: white; ">(</span><span style=" color: #66D9EF;">function</span><span style=" color: white;">( ){</span>
 										</div>
 										<div>
-											<span style="color: #66D9EF; ">&nbsp; &nbsp; &nbsp; animateB</span><span style=" color: white;">(</span> 
+											<span style="color: #66D9EF; ">&nbsp; &nbsp; &nbsp; animateB</span><span style=" color: white;">(</span>
 											<span style=" color: white;">);</span><span style=" color: white;">&nbsp;</span><span style="color: #66D9EF; ">&nbsp; &nbsp;&nbsp;</span>
 										</div>
 										<div>
@@ -188,12 +188,12 @@
 						</table>
 
 						</div>
-						
+
 						<p>这种代码不管是写起来还是读起来都比较烦人。 我们来看下经过Promise改造后的样子（伪代码）</p>
 
 						<div class="code-board">
 							<table>
-								<tr>	
+								<tr>
 									<td style="width: 260px;">
 										<div>
 											<span style=" color: #66D9EF;"><span style=" color: #F92672;">new</span>&nbsp;Promise</span><span style="color: white; ">(</span><span style=""><font style="color: white;">ajaxA</font></span><span style=" color: white;">)</span>
@@ -211,7 +211,7 @@
 								</tr>
 							</table>
 						</div>
-						
+
 					</div>
 				</div>
 			</div>
@@ -421,7 +421,7 @@
 						<p class="text-warning">
 							<b>
 								<code>问题5</code>, 所以Promise也不过如此嘛，它没有带来什么功能上的革命性变化，
-								因为使用传统的回调嵌套的方式，同样可以完成效果。 
+								因为使用传统的回调嵌套的方式，同样可以完成效果。
 								说白了它就是编码方式上的改进？？
 							</b>
 						</p>
@@ -430,7 +430,7 @@
 						</p>
 						<p class="text-warning">
 							<b>
-								<code>问题6</code>, 那如果我有ajaxA、ajaxB、ajaxC三个异步任务，想按照先A后B再C的顺序执行，像这样写行吗？ 
+								<code>问题6</code>, 那如果我有ajaxA、ajaxB、ajaxC三个异步任务，想按照先A后B再C的顺序执行，像这样写行吗？
 							</b>
 						</p>
 						<p class="text-muted answers">
@@ -552,7 +552,7 @@
 										<span style="color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;})</span>
 									</div>
 									<div>
-										<span style="color: #F8F8F2;">}).</span><span style="color: #A6E22E;">then</span><span style="color: #F8F8F2;">(</span><span style="color: #A6E22E;">函数3</span><span style="color: #F8F8F2;">(){</span> 
+										<span style="color: #F8F8F2;">}).</span><span style="color: #A6E22E;">then</span><span style="color: #F8F8F2;">(</span><span style="color: #A6E22E;">函数3</span><span style="color: #F8F8F2;">(){</span>
 										<span>
 											<font color="#807B66">//尽管这里使用了链式调用，但负责执行函数3的，已经是新的Promise对象了</font>
 										</span>
@@ -605,7 +605,7 @@
 								<td style="  width: 813px; "><div><span style="color: #F8F8F2;">Promise.</span><span style="color: #A6E22E;">race</span><span style="color: #F8F8F2;">(</span><span style="color: #F8F8F2;">[</span><span style="color: #F92672;">new</span> <span style="color: #F8F8F2;">Promise(</span><span style="color: #AE81FF;">A</span><span style="color: #F8F8F2;">),</span> <span style="color: #F92672;">new</span> <span style="color: #F8F8F2;">Promise(</span><span style="color: #AE81FF;">B</span><span style="color: #F8F8F2;">),</span> <span style="color: #F92672;">new</span> <span style="color: #F8F8F2;">Promise(</span><span style="color: #AE81FF;">C</span><span style="color: #F8F8F2;">)]</span><span style="color: #F8F8F2;">)</span></div><div ><span style="color: #F8F8F2;">.</span><span style="color: #A6E22E;">then</span><span style="color: #F8F8F2;">(</span><span style="color: #66D9EF;" class="itlc">function</span><span style="color: #F8F8F2;">(){</span></div><div ><span style="color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;</span> <span style="color: #AE81FF;">D</span><span style="color: #F8F8F2;">();</span></div><div><span style="color: #F8F8F2;">});</span></div></td></tr></table>
 						</div>
 					</div>
-				</div>	
+				</div>
 
 			</div>
 		</div>

@@ -1,36 +1,36 @@
 {
-	"id" : "git",
+	"id" : "this",
 	"detail" : `
 		<div class="row">
 			<div class="col-sm-12">
-				<div class="jumbotron"> <p> <span>工作中如何使用git开发项目？</span> </p> </div>
+				<div class="jumbotron"> <p> <span>用中国话学this指向</span> </p> </div>
 				<div class="panel panel-default">
 					<div class="panel-heading">
-						<code>注意：</code>
-						<code> 如果你熟悉Linux操作系统，那么这篇文章阅读速度会加倍</code>
+						<code> 这篇文章针对有JS基础，但始终无法搞清楚this指向的同学 </code>
 					</div>
 				</div>
 				<div class="panel panel-default">
 					<div class="panel-heading">
-						<code>另外：</code>
 						<code>
-							如果你熟悉SVN，那么Git只是一个更高级的版本管理工具而已
-						</code>
-					</div>
-				</div>
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<code>But：</code>
-						<code>
-						如果你不熟悉Linux，也不知道SVN，那么没关系，至少你使用过云盘来管理你日常的文件。
+							如果你知道call和apply以及bind方法，那就再好不过了
 						</code>
 					</div>
 				</div>
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<code>
-						如果你连云盘都没用过。那么你还是早点回火星吧，地球很危险的。
+              你还需要知道汉语当中的，第一人称和第二人称以及第三人称的区别
 						</code>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<code>
+              
+						</code>
+            <p>
+            
+            </p>
 					</div>
 				</div>
 				<div id="01"></div>
@@ -64,9 +64,9 @@
 						<p>
 							<img src="/static/images/git/wechat-pay-qrcode.png" width="300px">
 						</p>
-						
+
 						<h4><b class="text-danger"> 好了，刚才是个玩笑</b>, 但百度云盘真的有记录文件版本的功能</h4>
-						
+
 						<ul class="list-group">
 							<li href="#" class="list-group-item active">
 								因此，我们认为，一个好用的云盘软件，应该具备以下几个功能：
@@ -76,7 +76,7 @@
 							<li href="#" class="list-group-item">3、用户A对文件的修改提交后会同步给用户B</li>
 							<li href="#" class="list-group-item">4、所有用户对文件的每一次提交都会有记录保存，操作失误时，可以还原之前的版本</li>
 						</ul>
-						
+
 						<h4><b class="text-danger"> 版本管理</b>, 不正是因此而得名么？</h4>
 					</div>
 
@@ -128,7 +128,7 @@
 						<p class="answers">由于linus严重的个人兴趣倾向，他非常不喜欢文件集中式的管理</p>
 						<p class="answers">于是git软件打一开始就是分布式的</p>
 						<p class="answers"><b>简单的说：</b><code>就是任何人都可以向任何人的电脑上提交代码，任何人也可以从任何人的电脑上下载代码，任何人都可以被看作服务器端</code></p>
-						<p>再加上linus这种崇尚命令行主导一切的思维，git这个软件，打一开始就没有图形界面 
+						<p>再加上linus这种崇尚命令行主导一切的思维，git这个软件，打一开始就没有图形界面
 							<img src="/static/images/git/exp02.jpg" width="50"></p>
 						<p class="answers">所以使用git的时候，特别有种当黑客的感觉，有木有？
 							<img src="/static/images/git/exp03.jpg" width="60"></p>
@@ -139,14 +139,14 @@
 						<p class="answers">尽管，git率先发明了分支的设计，但是，这糟糕的用户体验，并没能使它在全球范围迅速流行起来，直到
 						<code>github</code>的出现.....</p>
 					</div>
-				</div>	
+				</div>
 
 			</div>
 		</div>
-		
+
 		<div id="04"></div>
 		<br><br><br>
-		
+
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="panel panel-info">
@@ -172,14 +172,14 @@
 						<p> <code>第二</code> 全世界所有知名的开源代码，都提交到了github上面并公开，这样一来，所有人都可以向这个开源项目提交自己的修改建议</p>
 						<p class="text-primary"> 它带动了git软件的流行，这就是今天你不得不学git的原因 </p>
 					</div>
-				</div>	
+				</div>
 
 			</div>
 		</div>
-		
+
 		<div id="05"></div>
 		<br><br><br>
-		
+
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="panel panel-info">
@@ -195,7 +195,7 @@
 						<p>找到一个合适的目录，例如E盘，在该目录下点击右键选择<code>git bash here</code></p>
 						<p>输入命令<span class="commond-line"> git clone https://github.com/ay8yt/teach.git</span> </p>
 						<p>项目就会自动下载，这时E盘会多出一个<code>teach</code>目录</p>
-						
+
 						<p><b>好了，你现在可以打开你的开发工具，到这个目录下，编写你的代码了</b></p>
 						<h3><p class="text-danger"> <b>1 项目写完了，咋提交呢？</b></p></h3>
 						<p class="answers text-muted">
@@ -209,7 +209,7 @@
 						</p>
 						<h3><p class="text-success"><b>提交成功！</b></p></h3>
 					</div>
-				</div>	
+				</div>
 
 			</div>
 		</div>
@@ -256,9 +256,9 @@
 						<p>github不仅提供了代码的托管，现在已经演变成了全球最大的代码分享社区</p>
 						<p>并在2018年6月份，以75亿美元的价格，卖给了微软</p>
 						<p>留给SVN的，只有一首<code>《凉凉》</code></p>
-						
+
 					</div>
-				</div>	
+				</div>
 
 			</div>
 		</div>
@@ -461,7 +461,7 @@
 						<p class="panel-body bg-danger"><img src="/static/images/git/pullrequest.png"></p>
 						<h3><p class="text-success">至此，你已经掌握了日常工作中git的基本使用</p></h3>
 					</div>
-				</div>	
+				</div>
 
 			</div>
 		</div>

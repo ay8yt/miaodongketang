@@ -1,0 +1,35 @@
+{
+	"id" : "prototype",
+	"detail" : `
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="jumbotron"> <p> <span>彻底搞定原型链</span> </p> </div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<code>注意：</code>
+						<code> 这篇文章假定你熟悉基本的构造函数及json对象的用法</code>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<code>另外：</code>
+						<code>
+							这篇文章假定你能够分清楚函数的this指向问题
+						</code>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<code>But：</code>
+						<code>
+						如果你暂时还搞不定，请先阅读文章《用中国话学this指向》
+						</code>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<br><br><br>
+
+	`
+}
