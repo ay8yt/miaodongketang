@@ -3,9 +3,8 @@ import Router from 'vue-router'
 
 Vue.use(Router);
 
-
-const Home = () => import(/** webpackChunkName: "Home" */ '@/components/Home.vue');
-const Article = () => import(/** webpackChunkName: "Article" */ '@/components/Article.vue');
+const Home = () => import(/* webpackChunkName: "Home" */ '@/components/Home.vue');
+const Article = () => import(/* webpackChunkName: "Article" */ '@/components/Article.vue');
 
 
 export default new Router({

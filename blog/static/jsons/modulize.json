@@ -1,0 +1,20 @@
+{
+	"id" : "modulize",
+	"detail" : `
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="jumbotron"> <p> <span>什么是模块化？</span> </p> </div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<code>作者正在努力的完成这篇文章，请您稍后几天~~</code>
+					</div>
+          <div class="panel-body">
+            <p>
+            	<img src="/static/images/commons/writing.jpg"/>
+            </p>
+          </div>
+				</div>
+			</div>
+    </div>
+	`
+}

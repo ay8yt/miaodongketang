@@ -1,7 +1,6 @@
 <template>
   <div class="BackTop">
     <div class="back-btn" v-show="show" v-on:click="backtop">
-      back
     </div>
   </div>
 </template>
@@ -16,7 +15,7 @@
     },
     beforeCreate() {
       let that = this;
-      $(window).scroll(this._.debounce(function(){
+      $(window).scroll(_.debounce(function(){
         console.log("change!");
         if($(window).scrollTop() > 800) {
           that.show = true;
@@ -33,19 +32,20 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .BackTop {
     .back-btn {
-      text-align: center;
-      width: 50px; height: 50px;
-      line-height: 50px;
-      border-radius: 3px;
+      background: url("/static/images/commons/back2top_default.png") 0 0;
+      background-size: cover;
+      width: 45px; height: 45px;
+      border-radius: 50%;
       box-shadow: 0 0 5px 0 #888;
       position: fixed;
       right: 50px; bottom: 30px;
       &:hover {
         cursor: pointer;
-        background: #eee;
+        background: url("/static/images/commons/back2top.png") 0 0;
+        background-size: cover;
       }
     }
   }

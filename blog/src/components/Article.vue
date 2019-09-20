@@ -13,9 +13,10 @@
 </template>
 
 <script>
-	import "../libs/jquery.min";
-	import "../libs/bootstrap-treeview.min";
-  import BackTop from "./commons/BackTop.vue";
+  import "../libs/bootstrap-treeview.min";
+
+  const BackTop = () => import(/* webpackChunkName: "back-top" */ './commons/BackTop.vue');
+
 	export default {
 		name : "Article",
 		data() {
@@ -26,10 +27,10 @@
 		},
 		created(){
 			this.getData(this.$route.params.aid);
-		},
-		mounted(){
 			//加载每篇文章对应的业务JS文件
-			$(`<script src="static/scripts/${this.$route.params.aid}/index.js">`).appendTo($("body"));
+			$(`<script src="${process.env.API_HOST}/static/scripts/${this.$route.params.aid}/index.js">`)
+      .appendTo($("body"));
+      // import(`/static/scripts/${this.$route.params.aid}/index.js`)
 		},
     beforeUpdate() {
       //重新渲染这个组件时，表示要切换文章，将scrollTop回0
@@ -58,7 +59,6 @@
 </script>
 
 <style lang="scss">
-	/* Animate Background Image */
 
 	@import url("../assets/bootstrap-treeview.min.css");
 	@import "~@/styles/article/_title.scss"; /*~@ 表示相对src目录*/
@@ -84,11 +84,13 @@
 		p.title {
 			margin: 50px 0 !important;
 		}
+    p.bold {
+      font-weight: bold;
+    }
 		img {
 			border-radius: 3px;
 		}
 	}
-
 	.commond-line {
 		background: #333;
 		color: white;
@@ -117,7 +119,12 @@
 	    }
 	}
 
-
+  span.bg-img {
+    border-radius: 5px;
+    padding: 5px;
+    display: table-cell;
+    background: black;
+  }
 
 	.itlc {
 	    font-style: italic;

@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style lang="scss">
-  	@import url('https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css');
+  	// @import url('https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css');
 		
   	@import "~@/styles/common/_common.scss";  /*~@ 表示相对src目录*/
   	@import "~@/styles/common/_mixins.scss";

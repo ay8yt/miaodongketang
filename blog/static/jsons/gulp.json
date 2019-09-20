@@ -30,7 +30,7 @@
 						</p>
 						<p>
 							<code>没关系，请点击浏览器右上角的差号，整个世界都会恢复往日的美好 </code>
-							<img width=40 src="static/images/gulp/goodbye.png"/>
+							<img width=40 src="/static/images/gulp/goodbye.png"/>
 						</p>
 					</div>
 				</div>
@@ -117,7 +117,7 @@
 						<p class="text-warning"> <b> 需要我打开命令行吗？ </b> </p>
 						<p class="answers text-muted"> 不然呢？ 难不成你想用QQ给NodeJS发个消息？ </p>
 						<p class="text-warning"> <b> 打开后是不是像这样？ </b> </p>
-						<p class="text-warning"> <img src="static/images/gulp/cmd01.png"/> </p>
+						<p class="text-warning"> <img src="/static/images/gulp/cmd01.png"/> </p>
 						<p class="answers text-muted"> 接下来进入你项目的根目录，然后输入命令  <span class="commond-line">npm install gulp</span></p>
 						<p class="text-warning"> <b> 安装时为什么要进入项目根目录？难道每个需要gulp的项目都要装一遍吗？ </b> </p>
 						<p class="answers text-muted"> 没错，是这样的。因为每个项目使用gulp的功能不同，版本可能也不一样。这样每个项目的gulp相互独立。</p>
@@ -150,7 +150,7 @@
 						<p class="answers text-muted"> <code>gulpfile.js</code>文件内容如下：</p>
 						<p class="answers text-muted"> <code>如果你熟悉nodeJS</code>那么下面的代码理解起来将会非常容易：</p>
 						<p class="answers text-muted"> <code>如果你不熟悉nodeJS</code>那么下面的代码理解起来将会非常吃力：</p>
-						<p class="text-warning"> <img src="static/images/gulp/gulpfile01.png"/> </p>
+						<p class="text-warning"> <img src="/static/images/gulp/gulpfile01.png"/> </p>
 						<p class="answers text-muted"> 好了，一切准备就绪，准备启动gulp执行压缩任务</p>
 						<p class="answers text-muted"> 我们回到命令行，仍然在项目的根目录下，输入命令 <span class="commond-line">gulp minifyJS</span> </p>
 						<p class="text-warning"> <b>  我执行了这个命令，但是碰见了错误： </b> </p>

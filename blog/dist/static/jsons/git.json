@@ -94,18 +94,19 @@
 						<h2>SVN的优势 <small>在使用git之前，你必须了解一下SVN</small></h2>
 					</div>
 					<div class="panel-body">
-						<p>SVN软件的使用，确实非常简单</p>
-						<p>它有两个安装包</p>
+						<p class="answers">说起来，SVN可是曾经风靡全球的版本管理工具</p>
+						<p class="answers">SVN软件的使用，确实非常简单</p>
+						<p class="answers">它有两个安装包</p>
 						<p>
 							<img class="illustration" src="/static/images/git/visualsvn_logo.jpg">
 							<img class="illustration" src="/static/images/git/visuasvnserver_logo.jpg">
 						</p>
-						<p>
+						<p class="answers">
 				第二个安装包是服务器端，也就是说，你可以通过安装这个服务器端的软件，很轻易的在公司内部搭建一个SVN服务器</p>
-						<p>这样大家就可以在公司内网进行文件或是 代码的共享了</p>
-						<p>程序员在写代码时，经常需要协同开发（多个人维护一个项目）</p>
-						<p>SVN带来的方便，自然不言而喻，几乎所有的主流开发工具，都会配有SVN的插件</p>
-						<p>SVN的具体用法，这里不再详细描述。请读者自行百度</p>
+						<p class="answers">这样大家就可以在公司内网进行文件或是 代码的共享了</p>
+						<p class="answers">程序员在写代码时，经常需要协同开发（多个人维护一个项目）</p>
+						<p class="answers">SVN带来的方便，自然不言而喻，几乎所有的主流开发工具，都会配有SVN的插件</p>
+						<p class="answers">SVN的具体用法，这里不再详细描述。请读者自行百度</p>
 					</div>
 				</div>
 			</div>
@@ -121,21 +122,21 @@
 						<h2>有了SVN，为什么会出现Git？</h2>
 					</div>
 					<div class="panel-body">
-						<p>git这个软件的作者，是大名鼎鼎的Linus(Linux系统内核的发明人，编程界神话级的程序员) </p>
-						<p>不得不说，git这个软件，在易用性上，跟SVN差了不是一个数量级</p>
-						<p>但毕竟是专门给程序员用的，谁还考虑用户体验？？</p>
-						<p>由于linus严重的个人兴趣倾向，他非常不喜欢文件集中式的管理</p>
-						<p>于是git软件打一开始就是分布式的</p>
-						<p><b>简单的说：</b><code>就是任何人都可以向任何人的电脑上提交代码，任何人也可以从任何人的电脑上下载代码，任何人都可以被看作服务器端</code></p>
+						<p class="answers">git这个软件的作者，是大名鼎鼎的Linus(Linux系统内核的发明人，编程界神话级的程序员) </p>
+						<p class="answers">不得不说，git这个软件，在易用性上，跟SVN差了不是一个数量级</p>
+						<p class="answers">但毕竟是专门给程序员用的，谁还考虑用户体验？？</p>
+						<p class="answers">由于linus严重的个人兴趣倾向，他非常不喜欢文件集中式的管理</p>
+						<p class="answers">于是git软件打一开始就是分布式的</p>
+						<p class="answers"><b>简单的说：</b><code>就是任何人都可以向任何人的电脑上提交代码，任何人也可以从任何人的电脑上下载代码，任何人都可以被看作服务器端</code></p>
 						<p>再加上linus这种崇尚命令行主导一切的思维，git这个软件，打一开始就没有图形界面 
 							<img src="/static/images/git/exp02.jpg" width="50"></p>
-						<p>所以使用git的时候，特别有种当黑客的感觉，有木有？
+						<p class="answers">所以使用git的时候，特别有种当黑客的感觉，有木有？
 							<img src="/static/images/git/exp03.jpg" width="60"></p>
 						</p>
 						<p>
 							<img src="/static/images/git/gitcmd.jpg" alt="">
 						</p>
-						<p>尽管，git率先发明了分支的设计，但是，这糟糕的用户体验，并没能使它在全球范围迅速流行起来，直到
+						<p class="answers">尽管，git率先发明了分支的设计，但是，这糟糕的用户体验，并没能使它在全球范围迅速流行起来，直到
 						<code>github</code>的出现.....</p>
 					</div>
 				</div>	
@@ -192,23 +193,20 @@
 						<p class="panel-body bg-danger"><img src="/static/images/git/projectnew.png" alt=""></p>
 						<p>现在，把项目的下载地址复制好了</p>
 						<p>找到一个合适的目录，例如E盘，在该目录下点击右键选择<code>git bash here</code></p>
-						<p>输入命令<code> git clone https://github.com/ay8yt/teach.git</code></p>
+						<p>输入命令<span class="commond-line"> git clone https://github.com/ay8yt/teach.git</span> </p>
 						<p>项目就会自动下载，这时E盘会多出一个<code>teach</code>目录</p>
 						
 						<p><b>好了，你现在可以打开你的开发工具，到这个目录下，编写你的代码了</b></p>
 						<h3><p class="text-danger"> <b>1 项目写完了，咋提交呢？</b></p></h3>
 						<p class="answers text-muted">
-							在命令行使用<code>cd teach</code>,进入teach目录
+							在命令行使用<span class="commond-line">cd teach</span>,进入teach目录
 						</p>
-						<p class="panel-body  bg-danger"><img src="/static/images/git/gitbash02.png" alt=""></p>
 						<p class="answers text-muted">
-							输入命令： <code>git add -A</code> , 将所有文件添加至缓存区，准备提交
+							输入命令： <span class="commond-line">git add -A</span> , 将所有文件添加至缓存区，准备提交
 						</p>
-						<p class="panel-body  bg-danger"><img src="/static/images/git/gitbash03.png" alt=""></p>
 						<p class="answers text-muted">
-							然后，输入<code>git commit -m '这里可以做一些描述，本次做了哪些修改'</code>
+							然后，输入<span class="commond-line">git commit -m '这里可以做一些描述，本次做了哪些修改'</span>
 						</p>
-						<p class="panel-body  bg-danger"><img src="/static/images/git/gitbash05.png" alt=""></p>
 						<h3><p class="text-success"><b>提交成功！</b></p></h3>
 					</div>
 				</div>	
@@ -224,9 +222,9 @@
 						<h2>可能还需要一些准备工作</h2>
 					</div>
 					<div class="panel-body">
-						<p>如果你第一次使用git，提交时，系统会提示你先设置用户信息</p>
-						<p><code>git config --global user.email "随便邮箱"</code></p>
-						<p><code>git config --global user.name "随便用户名"</code></p>
+						<p>如果你第一次使用git，提交时，系统会提示你先设置用户信息，那我们就设置一下：</p>
+						<p><span class="commond-line">git config --global user.email "随便邮箱"</span></p>
+						<p><span class="commond-line">git config --global user.name "随便用户名"</span></p>
 
 						<p>另外，由于项目通常是多人开发，你必须建立一个自己的分支</p>
 						<p class="text-warning">
@@ -281,7 +279,7 @@
 							如果你还有这样的疑问，显然你没有好好听课，因为上面已经讲过了。
 						</p>
 						<p class="answers text-muted">
-							算了，再说一次，下不为例。<code>git clone https://github.com/ay8yt/teach.git</code>
+							算了，再说一次，下不为例。<span class="commond-line">git clone https://github.com/ay8yt/teach.git</span>
 						</p>
 						<p class="text-warning">
 							<b>
@@ -289,7 +287,7 @@
 							</b>
 						</p>
 						<p class="answers text-muted">
-							使用branch命令。<code>git branch yintao01</code>
+							使用branch命令。<span class="commond-line">git branch yintao01</span>
 						</p>
 						<p class="text-warning">
 							<b>
@@ -297,7 +295,7 @@
 							</b>
 						</p>
 						<p class="answers text-muted">
-							<code>git checkout yintao01</code>
+							<span class="commond-line">git checkout yintao01</span>
 						</p>
 						<p><img src="/static/images/git/gitbash06.png"></p>
 						<p class="answers text-muted">
@@ -309,7 +307,7 @@
 							</b>
 						</p>
 						<p class="answers text-muted">
-							第一步，<code>git add -A</code>, 所有文件提交到缓存区
+							第一步，<span class="commond-line">git add -A</span>, 所有文件提交到缓存区
 						</p>
 						<p class="text-warning">
 							<b>
@@ -326,7 +324,7 @@
 							</b>
 						</p>
 						<p class="answers text-muted">
-							很简单，重置一下，<code>git reset</code>,然后就可以提交了。
+							很简单，重置一下，<span class="commond-line">git reset</span>,然后就可以提交了。
 						</p>
 						<p class="text-warning">
 							<b>
@@ -334,7 +332,7 @@
 							</b>
 						</p>
 						<p class="answers text-muted">
-							你TM事儿真多！好吧，你可以使用<code>git status</code>命令查看，都做了哪些改动，以及所有文件的状态。
+							你TM事儿真多！好吧，你可以使用<span class="commond-line">git status</span>命令查看，都做了哪些改动，以及所有文件的状态。
 						</p>
 						<p class="text-warning">
 							<b>
@@ -342,7 +340,7 @@
 							</b>
 						</p>
 						<p class="answers text-muted">
-							没错！使用<code>git commit -m '这里一定要把做了什么修改写清楚'</code>
+							没错！使用<span class="commond-line">git commit -m '这里一定要把做了什么修改写清楚'</span>
 						</p>
 						<p class="text-warning">
 							<b>
@@ -361,7 +359,7 @@
 							版本管理的好处，就是允许你后悔，首先你把错误的内容先修复好
 						</p>
 						<p class="answers text-muted">
-							然后再次add添加缓存，但这次提交时，注意使用<code>git commit --amend -m '刚才的提交就覆盖了'</code>
+							然后再次add添加缓存，但这次提交时，注意使用<span class="commond-line">git commit --amend -m '刚才的提交就覆盖了'</span>
 						</p>
 						<p class="text-warning">
 							<b>
@@ -369,7 +367,7 @@
 							</b>
 						</p>
 						<p class="answers text-muted">
-							使用<code>git reset head^</code>
+							使用<span class="commond-line">git reset head^</span>
 						</p>
 						<p class="text-warning">
 							<b>
@@ -377,7 +375,7 @@
 							</b>
 						</p>
 						<p class="answers text-muted">
-							使用<code>git reset head^^</code>
+							使用<span class="commond-line">git reset head^^</span>
 						</p>
 						<p class="text-warning">
 							<b>
@@ -385,7 +383,7 @@
 							</b>
 						</p>
 						<p class="answers text-muted">
-							<code>git reset head^^^^^^^^^^...</code>
+							<span class="commond-line">git reset head^^^^^^^^^^...</span>
 						</p>
 						<p class="text-warning">
 							<b>
@@ -393,7 +391,7 @@
 							</b>
 						</p>
 						<p class="answers text-muted">
-							没开玩笑，就是这样，当然你可以指定版本号直接还原<code>git reset --hard 7e2ec0f51e9ae2e7cbc7c4deca18b77b242148d6</code>
+							没开玩笑，就是这样，当然你可以指定版本号直接还原<span class="commond-line">git reset --hard 7e2ec0f51e9ae2e7cbc7c4deca18b77b242148d6</span>
 						</p>
 						<p class="text-warning">
 							<b>
@@ -401,7 +399,7 @@
 							</b>
 						</p>
 						<p class="answers text-muted">
-							你可以用<code>git log</code>查看所有版本
+							你可以用<span class="commond-line">git log</span>查看所有版本
 						</p>
 						<p class="text-warning">
 							<b>
@@ -438,19 +436,19 @@
 							为了方便做远程推送，通常我们会给远程仓库地址做个快捷方式。
 						</p>
 						<p class="answers text-muted">
-							<code>git remote add miaodong  https://git.oschina.net/ay8yt/test.git</code>
+							<span class="commond-line">git remote add miaodong  https://git.oschina.net/ay8yt/test.git</span>
 						</p>
 						<p class="answers text-muted">
 							这个<code>miaodong</code>就是快捷名称，接下来你提交时，就可以这样写：
 						</p>
 						<p class="answers text-muted">
-							<code>git push -u miaodong yintao01</code> 这句话的意思就是把yintao01这个分支推送到miaodong这个仓库地址
+							<span class="commond-line">git push -u miaodong yintao01</span> 这句话的意思就是把yintao01这个分支推送到miaodong这个仓库地址
 						</p>
 						<p class="answers text-muted">
 							<code>-u</code> 的意思就是把yintao01设为默认分支
 						</p>
 						<p class="answers text-muted">
-							下次再推送，就可以直接写<code>git push miaodong</code>
+							下次再推送，就可以直接写<span class="commond-line">git push miaodong</span>
 						</p>
 						<p class="text-warning">
 							<b>
