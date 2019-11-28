@@ -304,76 +304,125 @@
 
     <div id="07"></div>
     <br><br>
-		<div class="row">
-			<div class="col-sm-12">
-				<div class="panel panel-info">
-					<div class="panel-heading">
-						<h2>由this衍生出的问题</h2>
-					</div>
-					<div class="panel-body">
-						<p>刚才遗留了一个问题没有解决</p>
-            <code-format>
-              <img src="/static/images/this/a14.png"/>
-            </code-format>
-            <p>我们期待this指向btn，而this现在却指向了window</p>
-            <p>这个问题该怎么修复呢？ 有很多办法</p>
-            <p class="bold">如果你不知道call、apply、bind，那么恐怕你只能看得懂方法A</p>
-            <code-format>
-              <img src="/static/images/this/a15.png"/>
-            </code-format>
-            <p></p>
-            <code-format>
-              <img src="/static/images/this/a16.png"/>
-            </code-format>
-            <p></p>
-            <code-format>
-              <img src="/static/images/this/a17.png"/>
-            </code-format>
-            <p></p>
-            <code-format>
-              <img src="/static/images/this/a18.png"/>
-            </code-format>
-					</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<h2>由this衍生出的问题</h2>
+				</div>
+				<div class="panel-body">
+					<p>刚才遗留了一个问题没有解决</p>
+		<code-format>
+		  <img src="/static/images/this/a14.png"/>
+		</code-format>
+		<p>我们期待this指向btn，而this现在却指向了window</p>
+		<p>这个问题该怎么修复呢？ 有很多办法</p>
+		<p class="bold">如果你不知道call、apply、bind，那么恐怕你只能看得懂方法A</p>
+		<code-format>
+		  <img src="/static/images/this/a15.png"/>
+		</code-format>
+		<p></p>
+		<code-format>
+		  <img src="/static/images/this/a16.png"/>
+		</code-format>
+		<p></p>
+		<code-format>
+		  <img src="/static/images/this/a17.png"/>
+		</code-format>
+		<p></p>
+		<code-format>
+		  <img src="/static/images/this/a18.png"/>
+		</code-format>
 				</div>
 			</div>
 		</div>
+	</div>
 
 
     <div id="08"></div>
     <br><br>
-		<div class="row">
-			<div class="col-sm-12">
-				<div class="panel panel-info">
-					<div class="panel-heading">
-						<h2>接下来的内容，学完ES6的箭头函数再来吧</h2>
-					</div>
-					<div class="panel-body">
-						<p class="text-warning">
-							<b>
-							  1. 如何判断箭头函数的this？
-							</b>
-						</p>
-						<p class="answers text-muted">
-							因为箭头函数不具备自己的this，所以非常简单，假装它不存在，就像这样：
-						</p>
-            <code-format>
-              <img src="/static/images/this/a19.png"/>
-            </code-format>
-            <p>这下this的指向非常清晰了吧</p>
-						<p class="text-warning">
-							<b>
-								2. 箭头函数可以用call来改变this指向吗？
-							</b>
-						</p>
-						<p class="answers text-muted">
-							不能！！ 试图改变箭头函数的this是徒劳的。
-						</p>
-            <code-format>
-              <img src="/static/images/this/a20.png"/>
-            </code-format>
-					</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<h2>接下来的内容，学完ES6的箭头函数再来吧</h2>
+				</div>
+				<div class="panel-body">
+					<p class="text-warning">
+						<b>
+						  1. 如何判断箭头函数的this？
+						</b>
+					</p>
+					<p class="answers text-muted">
+						因为箭头函数不具备自己的this，所以非常简单，假装它不存在，就像这样：
+					</p>
+		<code-format>
+		  <img src="/static/images/this/a19.png"/>
+		</code-format>
+		<p>这下this的指向非常清晰了吧</p>
+					<p class="text-warning">
+						<b>
+							2. 箭头函数可以用call来改变this指向吗？
+						</b>
+					</p>
+					<p class="answers text-muted">
+						不能！！ 试图改变箭头函数的this是徒劳的。
+					</p>
+		<code-format>
+		  <img src="/static/images/this/a20.png"/>
+		</code-format>
 				</div>
 			</div>
 		</div>
+	</div>
+
+	<div id="09"></div>
+	<br><br>
+
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<h2>最后一个特例<code>构造函数</code></h2>
+				</div>
+				<div class="panel-body">
+					<p class="text-warning">
+						<b>
+              1. 什么是构造函数？
+						</b>
+					</p>
+					<p class="answers text-muted">
+						假设有一个函数Fn, 我们有两种方式来调用它
+					</p>
+
+          <ul class="list-group">
+            <li class="list-group-item">
+              普通的调用 <a class="btn btn-default btn-lg">Fn()</a>
+            </li>
+            <li class="list-group-item">
+              配合<code>new</code>关键字来调用
+              <a class="btn btn-default btn-lg">new Fn()</a>
+            </li>
+          </ul>
+          <p>
+            <b> 第二种调用方式, 函数就变成了构造函数</b>
+          </p>
+          <p class="answers text-muted">
+          	<code>注意</code>,在构造函数中, 上面我们所讲的结论,是不成立的！！
+          </p>
+          <p class="text-warning">
+          	<b>
+              2. 那构造函数里的this是谁呢？
+          	</b>
+          </p>
+          <p class="text-danger">
+          	<b>
+              请期待下一篇文章《构造函数与class》
+          	</b>
+          </p>
+				</div>
+			</div>
+		</div>
+	</div>
 	`
 }
